@@ -18,9 +18,9 @@ html {
 }
 
 html {
-  background-image: url(../img/painting-bkgd.png), url(../img/fabric_plaid.png);
-    background-position: center center, left top;
-    background-repeat: no-repeat, repeat;
+  // background-image: url(../img/painting-bkgd.png), url(../img/fabric_plaid.png);
+  //   background-position: center center, left top;
+  //   background-repeat: no-repeat, repeat;
 }
 
 body {
@@ -28,9 +28,9 @@ body {
   color: $font-color;
   transition: 500ms;
   
-  &.in-transition {
-    transition: transform 900ms ease;
-  }
+  // &.in-transition {
+  //   transition: transform 900ms ease;
+  // }
 }
 
 *,
@@ -80,6 +80,18 @@ img {
   text-align: center;
   position: relative;
   padding: 5px 0;
+  border: 1px solid $site-yellow
+}
+
+.hr-line {
+  height: 1px;
+  width: 100%;
+  -moz-background: -moz-linear-gradient(to right,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.65) 50%,rgba(118,118,118,0) 100%);
+  -webkit-background: -webkit-linear-gradient(to right,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.65) 50%,rgba(118,118,118,0) 100%);
+  background: linear-gradient(to right,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.65) 50%,rgba(118,118,118,0) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .legal{
@@ -133,6 +145,8 @@ img {
     height:100%
 }
 
+
+
 /*******************************
 
   Basic 4 Column Grid
@@ -171,7 +185,6 @@ img {
 .site-header {
   padding: 20px 0 0;
   width: 100%;
-  position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
@@ -182,19 +195,24 @@ img {
   }
 }
 
-.site-header .wrapper {
-  height: 100%;
-  position: relative;
-}
+// .site-header .wrapper {
+//   height: 100%;
+//   position: relative;
+// }
 
 .logo-wrapper {
-  width: 336px;
-  height: 260px;
-  float: left;
+  width: $logo-width;
+  height: $logo-height;
+  margin: 0 auto;
 
   a {
     display: inline-block;
   }
+}
+
+.slogan {
+  width: 100%;
+  text-align: center;
 }
 
 .menu-btn {
@@ -209,11 +227,6 @@ img {
 .menu-nav-btn__bar {
   width: 100%;
   height: 1px;
-  background: #767676;
-  background: -moz-linear-gradient(left,  rgba(118,118,118,0) 0%, rgba(118,118,118,0.83) 100%);
-  background: -webkit-linear-gradient(left,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.83) 100%);
-  background: linear-gradient(to right,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.83) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00767676', endColorstr='#d4767676',GradientType=1 );
   margin-top: 5px;
   display: inherit;
   -webkit-transition: 400ms;
@@ -241,10 +254,6 @@ img {
   transform-origin: center center;
   -webkit-transform-origin: center center;
   margin-top: 0px;
-  background: -moz-linear-gradient(left,  rgba(118,118,118,0) 0%, rgba(118,118,118,0.83) 50%, rgba(118,118,118,0) 100%);
-  background: -webkit-linear-gradient(left,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.83) 50%,rgba(118,118,118,0) 100%);
-  background: linear-gradient(to right,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.83) 50%,rgba(118,118,118,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00767676', endColorstr='#00767676',GradientType=1 );
 }
 
 .menu-btn.active .menu-nav-btn__bar:first-child {
@@ -275,30 +284,7 @@ img {
   padding: 5px 0;
 
   a {
-    .border-line {
-      height: 1px;
-      width: 100%;
-      -moz-background: -moz-linear-gradient(to right,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.65) 50%,rgba(118,118,118,0) 100%);
-      -webkit-background: -webkit-linear-gradient(to right,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.65) 50%,rgba(118,118,118,0) 100%);
-      background: linear-gradient(to right,  rgba(118,118,118,0) 0%,rgba(118,118,118,0.65) 50%,rgba(118,118,118,0) 100%);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      transition: 400ms ease;
 
-      &:first-child {
-        bottom: initial;
-        top: 0px;
-      }
-    }
-
-    &:hover {
-      .border-line {
-        opacity: 1;
-
-      }
-    }
   }
 }
 
@@ -312,23 +298,6 @@ img {
   letter-spacing: 0.6px;
 }
 
-.site-nav li a span {
-  font: 22px 'alex_brush', arial, sans-serif;
-  display: block;
-}
-
-[data-content="projects"] span {
-  color: $purple;
-}
-
-[data-content="resume"] span {
-  color: $clay;
-}
-
-[data-content="contact"] span {
-  color: $melon;
-}
-
 .social-nav {
   margin: 20px 0;
 }
@@ -337,8 +306,6 @@ img {
   font: 40px 'stackicons';
   color: #fff;
 }
-
-.content-wrapper {}
 
 .site-content {
   z-index: 1;
@@ -375,18 +342,6 @@ img {
       }
     }
   }
-
-  .site-nav {
-    top: 4px;
-  }
-
-  .site-nav li a {
-    font-size: 20px;
-  }
-
-  .site-nav li a span {
-    font: 20px 'alex_brush', arial, sans-serif;
-  }
 }
 
 .site-header.mobile-active .site-nav ul {
@@ -400,6 +355,17 @@ img {
   Homepage Styles
 
 *******************************/
+
+.hero {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  background-image: url(../img/home-img.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // display: block;
+}
 .homepage-intro .title {
   font: 100px 'alex_brush', arial, sans-serif;
   text-align: center;

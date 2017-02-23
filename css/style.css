@@ -119,17 +119,10 @@ html {
   padding: 0;
   margin: 0; }
 
-html {
-  background-image: url(../img/painting-bkgd.png), url(../img/fabric_plaid.png);
-  background-position: center center, left top;
-  background-repeat: no-repeat, repeat; }
-
 body {
   font: 100 16px 'work_sans', arial, sans-serif;
   color: #767676;
   transition: 500ms; }
-  body.in-transition {
-    transition: transform 900ms ease; }
 
 *,
 *:after,
@@ -169,7 +162,18 @@ img {
   display: inline-block;
   text-align: center;
   position: relative;
-  padding: 5px 0; }
+  padding: 5px 0;
+  border: 1px solid yellow; }
+
+.hr-line {
+  height: 1px;
+  width: 100%;
+  -moz-background: -moz-linear-gradient(to right, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.65) 50%, rgba(118, 118, 118, 0) 100%);
+  -webkit-background: -webkit-linear-gradient(to right, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.65) 50%, rgba(118, 118, 118, 0) 100%);
+  background: linear-gradient(to right, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.65) 50%, rgba(118, 118, 118, 0) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0; }
 
 .legal {
   color: #fff;
@@ -248,7 +252,6 @@ img {
 .site-header {
   padding: 20px 0 0;
   width: 100%;
-  position: fixed;
   z-index: 5;
   top: 0;
   left: 0;
@@ -256,16 +259,16 @@ img {
   .site-header > * {
     transition: 600ms; }
 
-.site-header .wrapper {
-  height: 100%;
-  position: relative; }
-
 .logo-wrapper {
-  width: 336px;
-  height: 260px;
-  float: left; }
+  width: 132px;
+  height: 132px;
+  margin: 0 auto; }
   .logo-wrapper a {
     display: inline-block; }
+
+.slogan {
+  width: 100%;
+  text-align: center; }
 
 .menu-btn {
   width: 40px;
@@ -277,11 +280,6 @@ img {
 .menu-nav-btn__bar {
   width: 100%;
   height: 1px;
-  background: #767676;
-  background: -moz-linear-gradient(left, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.83) 100%);
-  background: -webkit-linear-gradient(left, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.83) 100%);
-  background: linear-gradient(to right, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.83) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00767676', endColorstr='#d4767676',GradientType=1 );
   margin-top: 5px;
   display: inherit;
   -webkit-transition: 400ms;
@@ -304,11 +302,7 @@ img {
   transform: translateY(3px) rotate(-45deg);
   transform-origin: center center;
   -webkit-transform-origin: center center;
-  margin-top: 0px;
-  background: -moz-linear-gradient(left, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.83) 50%, rgba(118, 118, 118, 0) 100%);
-  background: -webkit-linear-gradient(left, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.83) 50%, rgba(118, 118, 118, 0) 100%);
-  background: linear-gradient(to right, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.83) 50%, rgba(118, 118, 118, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00767676', endColorstr='#00767676',GradientType=1 ); }
+  margin-top: 0px; }
 
 .menu-btn.active .menu-nav-btn__bar:first-child {
   transform: translateY(3px) rotate(45deg); }
@@ -332,22 +326,6 @@ img {
   margin: 0 0 0 20px;
   position: relative;
   padding: 5px 0; }
-  .site-nav li a .border-line {
-    height: 1px;
-    width: 100%;
-    -moz-background: -moz-linear-gradient(to right, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.65) 50%, rgba(118, 118, 118, 0) 100%);
-    -webkit-background: -webkit-linear-gradient(to right, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.65) 50%, rgba(118, 118, 118, 0) 100%);
-    background: linear-gradient(to right, rgba(118, 118, 118, 0) 0%, rgba(118, 118, 118, 0.65) 50%, rgba(118, 118, 118, 0) 100%);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    transition: 400ms ease; }
-    .site-nav li a .border-line:first-child {
-      bottom: initial;
-      top: 0px; }
-  .site-nav li a:hover .border-line {
-    opacity: 1; }
 
 .site-nav li:first-child {
   margin: 0; }
@@ -356,19 +334,6 @@ img {
   font-size: 22px;
   display: inline-block;
   letter-spacing: 0.6px; }
-
-.site-nav li a span {
-  font: 22px 'alex_brush', arial, sans-serif;
-  display: block; }
-
-[data-content="projects"] span {
-  color: #897c8d; }
-
-[data-content="resume"] span {
-  color: #cf8a6c; }
-
-[data-content="contact"] span {
-  color: #67bfad; }
 
 .social-nav {
   margin: 20px 0; }
@@ -402,12 +367,6 @@ img {
       .site-header.small .logo-wrapper a img {
         position: relative;
         top: 4px; }
-  .site-header.small .site-nav {
-    top: 4px; }
-  .site-header.small .site-nav li a {
-    font-size: 20px; }
-  .site-header.small .site-nav li a span {
-    font: 20px 'alex_brush', arial, sans-serif; }
 
 .site-header.mobile-active .site-nav ul {
   position: relative;
@@ -419,6 +378,15 @@ img {
   Homepage Styles
 
 *******************************/
+.hero {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  background-image: url(../img/home-img.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .homepage-intro .title {
   font: 100px 'alex_brush', arial, sans-serif;
   text-align: center; }
