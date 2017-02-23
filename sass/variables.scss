@@ -1,0 +1,46 @@
+$wrapper-width: 960px;
+$font-size: 16px;
+$line-height: $font-size * 1.6;
+$h1-size: $font-size * 2; // all other fonts are related to $font-size.
+
+// Text Color
+$font-color-dark: #474747;
+$font-color: #767676;
+$font-color-light: #767676;
+
+// Form Background Color
+$body-bg-color: #fff;
+
+//Slider
+// $slider-bg-color: #b6b6b6;
+// $slider-active-bg-color: $primary-color;
+// $slider-disabled-color: #d2d2d2;
+
+//Colors
+$green-dark: #12b25d;
+$green: #4dffa0;
+$green-light: #33ff92;
+$red-dark: #b21100;
+$red: #ff4633;
+$purple: #897c8d;
+$clay: #cf8a6c;
+$melon: #67bfad;
+
+///////////////////
+
+//Color of Selected Objects
+$selected-color: #0086e6;
+
+//The Focus Indicator on Fields
+$focus-shadow: 0 0 3px #0095ff;
+
+//The Link Style
+$link-color: $green-dark;
+$link-hover-color: rgba($link-color,0.8);
+$link-active-color: #004096;
+
+//Breakpoint sizes
+$breakpoint-phone: 420px;
+$breakpoint-phone-to-tablet: 768px;
+$breakpoint-tablet-to-desktop: 1240px;
+$breakpoint-desktop-to-extralarge: 1479px;
