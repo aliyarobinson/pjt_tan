@@ -43,27 +43,27 @@ var AYR = AYR || {};
       // Reference: https://developer.mozilla.org/en-US/docs/Web/Events/scroll
       // Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
 
-      function doSomething(scroll_pos) {
-        if(ayrApi.isMobile() === false) {
-          if(last_known_scroll_position >= 100 ){
-            siteHeader.classList.add('small');
-          }else{
-            siteHeader.classList.remove('small');
-          }
-        }
-      }
+      // function doSomething(scroll_pos) {
+      //   if(ayrApi.isMobile() === false) {
+      //     if(last_known_scroll_position >= 100 ){
+      //       siteHeader.classList.add('small');
+      //     }else{
+      //       siteHeader.classList.remove('small');
+      //     }
+      //   }
+      // }
 
-      window.addEventListener('scroll', function(e) {
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        last_known_scroll_position = scrollTop;
-        if (!ticking) {
-          window.requestAnimationFrame(function() {
-            doSomething(last_known_scroll_position);
-            ticking = false;
-          });
-        }
-        ticking = true;
-      });
+      // window.addEventListener('scroll', function(e) {
+      //   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      //   last_known_scroll_position = scrollTop;
+      //   if (!ticking) {
+      //     window.requestAnimationFrame(function() {
+      //       doSomething(last_known_scroll_position);
+      //       ticking = false;
+      //     });
+      //   }
+      //   ticking = true;
+      // });
 
 
       /**************************************/
@@ -122,44 +122,23 @@ var AYR = AYR || {};
       }());
 
       // start process
-      optimizedResize.add(function() {
-        if(ayrApi.isMobile()){
-          siteHeader.classList.remove('small');
-        } else {
-          if(last_known_scroll_position >= 100 ){
-            siteHeader.classList.add('small');
-          }else{
-            siteHeader.classList.remove('small');
-          }
-        }
+      // optimizedResize.add(function() {
+      //   if(ayrApi.isMobile()){
+      //     siteHeader.classList.remove('small');
+      //   } else {
+      //     if(last_known_scroll_position >= 100 ){
+      //       siteHeader.classList.add('small');
+      //     }else{
+      //       siteHeader.classList.remove('small');
+      //     }
+      //   }
 
-        // Resize Content Display Wrapper based on new height of content on resize
-        contentDisplayWrapper.style.height = document.querySelector('.content-pages > .' + AYR.currPageName + '-page').offsetHeight + 'px';
-      });
+      //   // Resize Content Display Wrapper based on new height of content on resize
+      //   contentDisplayWrapper.style.height = document.querySelector('.content-pages > .' + AYR.currPageName + '-page').offsetHeight + 'px';
+      // });
 
     }, // End Init
 
-    pageLocation: {
-      observers: [],
-      registerObserver: function(observer){
-        this.observers.push(observer);
-      },
-      notifyObservers: function(page){
-        var thisPage = page;
-        for(var i = 0; i < this.observers.length; i++) {
-          this.observers[i].notify(thisPage);
-        }
-      }
-    },
-
-    pageState: {
-      notify: function(page) {
-        if (ayrApi.isHome(page)){
-          page = "index";
-        } 
-        AYR.transitionContent(page);
-      }
-    },
 
     collapseMobileNav: function() {
       // Collapse Mobile Nav When navigation link is clicked in mobile view
