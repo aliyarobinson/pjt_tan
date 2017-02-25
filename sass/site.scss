@@ -292,9 +292,11 @@ input {
         border-color: $site-yellow;
       }
 
+      &.btn,
       &.btn:hover {
         border: 1px solid $site-yellow;
-        border-style: none none solid;
+        border-style: solid;
+        text-transform: capitalize;
       }
     }
   }
@@ -584,248 +586,32 @@ input {
 
 
 
-@media screen and (max-width: 1024px) {
-  .site-footer .favorites .block {
-    width: 100%;
-  }
-  
-  .project-content {
-    
-    > * {
-      width: 30%;
-    }
+@media screen and (max-width: 980px) {
 
-    .proj-year-block {
-      display: none;
-    }
-
-    &:hover {}
-  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:1),(max-width:768px) {
-  .block-1-wide {
-    width: 50%;
-    max-width: none;
-    min-height: 100px;
-  }
-  .block-3-wide {
-    width: 100%;
-    max-width: none;
-  }
-  .loader {
-    top: 150px;
-  }
-  .logo-wrapper {
-    width: 150px;
-    height: 120px;
-    position: fixed;
-    top: 20px;
-    left: 10px;
-    z-index: 20;
-  }
-
-  .menu-btn {
-    display: block;
-    z-index: 20;
-    position: fixed;
-    right: 20px;
-    top: 14px;
-  }
-
-  .site-header {
-    height: 70px;
-    background: rgba(255,255,255, 0.8);
-    border: 1px rgba(155, 155, 155, 0.68) solid;
-    border-style: none none solid;
-    margin: 0;
-    transition: 400ms;
-  }
-
-  .site-nav {
-    background: transparent;
-    transition: 400ms;
-  }
-
-  .site-nav ul {
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  .site-nav li {
-    float: none;
-    margin: 0;
-  }
-
-  .site-header.mobile-active {
-    height: 120px;
-    background: rgba(255,255,255, 0);
-    border: 1px rgba(155, 155, 155, 0) solid;
-  }
-
-  .site-nav.active {
-    float: none;
-    background: rgba(255,255,255, 0.95);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-
-    li {
-      margin: 0 0 30px;
-
-      &:first-child {
-        margin: 0 0 30px;
-      }
-    }
-
-    li a span {
-      display: inline;
-      margin: 0 10px 0 0;
-    }
-  }
-
-  .site-nav.active ul {
-    max-height: 3000px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform:  translate(-50%, -50%);
-    z-index: 10;
-    position: absolute;
-    min-width: 260px;
-    text-align: center;
-  }
-
-  #content-holder {
-    margin: 170px 0 0;
-  }
-  
-  .content-display-wrapper {
-    margin: 180px 0 0;
-  }
-
-  .homepage-intro .title {
-    font: 60px 'alex_brush', arial, sans-serif;
-  }
-
-  .homepage-intro .subtitle {
-    width: 96%;
-    font-size: 20px;
-  }
-
-  .resume {
-    .block {
-      width: 100%;
-      max-width: none;
-    }
-  }
-
-  .project {
-    .slanted-divider {
-      right: 70px;
-    }
-
-    &:hover {
-      .slanted-divider,
-      .proj-title-block,
-      .proj-tools-block {
-        opacity: 0;
-      }
-
-      .project-content .cta-block {
-        right: 25%;
-      }
-    }
-  }
-  
-  .proj-year-block {
-    display: none;
-  }
-
-  .cta-btn {
-    width: 100%;
-  }
-
-  .project-content > * {
-    width: 30%;
-  }
-
-  .site-footer .wrapper > .block {
-    width: 100%;
-    max-width: none;
-    padding: 0;
-    margin: 0 0 40px;
-  }
-
-  .site-footer .favorites .block {
-    height: auto;
-  }
-
+  // .block-1-wide {
+  //   width: 50%;
+  //   max-width: none;
+  //   min-height: 100px;
+  // }
+  // .block-3-wide {
+  //   width: 100%;
+  //   max-width: none;
+  // }
 }
 
-@media screen and (max-width: 650px) {
-  .block-1-wide,
-  .block-2-wide,
-  .block-3-wide,
-  .block-4-wide {
-    width: 100%;
-    max-width: none;
-  }
+// @media screen and (max-width: 800px) {
+//   .block-1-wide,
+//   .block-2-wide,
+//   .block-3-wide,
+//   .block-4-wide {
+//     width: 100%;
+//     max-width: none;
+//   }
+// }
 
-
-  .project-content {
-    
-    > * {
-      width: 50%;
-    }
-
-    .proj-year-block,
-    .proj-tools-block {
-      opacity: 0;
-    }
-
-    &:hover {}
-  }
-
-  .experience-mod .position-title {
-    padding-bottom: 0px;
-  }
-
-  .experience-mod .date {
-    position: relative;
-    right: 0;
-    top: 0;
-    float: none;
-    text-align: left;
-  }
-
-  .experience-mod .position-desc {
-    padding: 10px 0 0;
-  }
-}
-@media screen and (max-width: 500px) {
-  .homepage-intro .title {
-    font: 60px/1em 'alex_brush', arial, sans-serif;
-  }
-
-  .homepage-intro .subtitle {
-    width: 93%;
-    font-size: 16px;
-    margin: 0;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .homepage-intro blockquote {
-    font: 26px 'alex_brush', arial, sans-serif;
-    width: 80%;
-  }
-
-  .homepage-intro blockquote cite {
-    font: 100 16px 'work_sans', arial, sans-serif;
-  }
+@media screen and (max-width: 600px) {
 
 }
