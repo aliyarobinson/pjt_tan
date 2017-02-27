@@ -265,6 +265,25 @@ img {
 input {
   border: none; }
 
+input[type="text"] {
+  width: 40%;
+  color: #414042;
+  background: #fff;
+  height: 45px; }
+
+[type="submit"] {
+  background: transparent;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  border: #ffde17 solid 2px;
+  border-style: none none solid;
+  max-width: 100px;
+  font-size: 24px;
+  font-weight: 100;
+  margin: 20px 0 0;
+  font-family: inherit; }
+
 /*******************************
 
   Basic 4 Column Grid
@@ -455,25 +474,9 @@ input {
       line-height: 20px;
       color: #fff; }
     .index-page .hero .cta-block input[type="text"] {
-      width: 40%;
-      color: #414042;
-      background: #fff;
-      height: 45px;
       margin: 0 0 0 5%; }
       .index-page .hero .cta-block input[type="text"]:first-child {
         margin: 0; }
-    .index-page .hero .cta-block [type="submit"] {
-      background: transparent;
-      width: 100%;
-      text-align: center;
-      color: #fff;
-      border: #ffde17 solid 2px;
-      border-style: none none solid;
-      max-width: 100px;
-      font-size: 24px;
-      font-weight: 100;
-      margin: 20px 0 0;
-      font-family: inherit; }
 .index-page .mission {
   z-index: 1;
   position: relative; }
@@ -510,7 +513,9 @@ input {
 .site-footer {
   color: #414042;
   padding: 20px 0;
-  margin: 100px 0 0; }
+  margin: 40px 0 0; }
+  .site-footer h3 {
+    padding: 0 0 20px; }
   .site-footer .footer-logo-wrapper {
     width: 240px;
     position: absolute;
@@ -526,8 +531,18 @@ input {
       .site-footer .footer-blocks .footer-subscribe h3 {
         margin: 0;
         line-height: 50px; }
+      .site-footer .footer-blocks .footer-subscribe input[type="text"] {
+        margin: 0 0 10px;
+        background: #ffde17;
+        width: 100%;
+        color: #414042; }
+      .site-footer .footer-blocks .footer-subscribe [type="submit"] {
+        color: #414042;
+        float: right;
+        margin: 0; }
   .site-footer .social-legal {
-    text-align: center; }
+    text-align: center;
+    margin: 60px 0 100px; }
     .site-footer .social-legal .legal {
       font-size: 16px;
       letter-spacing: 1px;
@@ -567,7 +582,17 @@ input {
 
 @media screen and (max-width: 980px) {
   .index-page .hero .hero-copy {
-    transform: translate(-50%, -50%); } }
+    transform: translate(-50%, -50%); }
+
+  .site-footer .footer-blocks .block {
+    width: 45%; }
+  .site-footer .footer-blocks .footer-subscribe {
+    padding: 0 20px 0 0; }
+  .site-footer .social-legal {
+    margin: 300px 0 100px; }
+  .site-footer .footer-logo-wrapper {
+    bottom: 190px;
+    top: initial; } }
 @media screen and (max-width: 768px) {
   .site-header .logo-wrapper {
     width: 100px; }
@@ -596,6 +621,16 @@ input {
   .hero .hero-copy {
     width: 80%;
     font-size: 16px;
-    line-height: 18px; } }
+    line-height: 18px; }
+
+  .site-footer .btn {
+    width: 100%; }
+  .site-footer .footer-logo-wrapper {
+    bottom: 200px;
+    top: initial; }
+  .site-footer .footer-blocks .block {
+    width: 100%;
+    max-width: none;
+    padding: 0 20px 30px; } }
 
 /*# sourceMappingURL=style.css.map */
