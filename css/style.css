@@ -284,6 +284,38 @@ input[type="text"] {
   margin: 20px 0 0;
   font-family: inherit; }
 
+::-webkit-input-placeholder {
+  color: #414042;
+  font-size: 22px;
+  position: relative;
+  top: 2px;
+  font-weight: 100;
+  padding: 0 0 0 10px; }
+
+:-moz-placeholder {
+  color: #414042;
+  font-size: 22px;
+  position: relative;
+  top: 2px;
+  font-weight: 100;
+  padding: 0 0 0 10px; }
+
+::-moz-placeholder {
+  color: #414042;
+  font-size: 22px;
+  position: relative;
+  top: 2px;
+  font-weight: 100;
+  padding: 0 0 0 10px; }
+
+:-ms-input-placeholder {
+  color: #414042;
+  font-size: 22px;
+  position: relative;
+  top: 2px;
+  font-weight: 100;
+  padding: 0 0 0 10px; }
+
 /*******************************
 
   Basic 4 Column Grid
@@ -492,7 +524,9 @@ input[type="text"] {
   .index-page .mission h3 {
     text-align: center; }
   .index-page .mission .block {
-    padding: 130px 6% 70px 0; }
+    padding: 220px 0 70px 6%; }
+    .index-page .mission .block:first-child {
+      padding: 200px 6% 70px 0; }
     .index-page .mission .block p {
       font-size: 30px;
       line-height: 40px; }
@@ -502,8 +536,18 @@ input[type="text"] {
   color: #fff; }
   .index-page .event h3 {
     padding: 40px 0; }
+  .index-page .event .event-img {
+    width: 100%;
+    max-width: 680px;
+    display: inline-block; }
   .index-page .event .cta-btn-block {
-    margin: 30px 0 0; }
+    margin: 30px 0 40px; }
+    .index-page .event .cta-btn-block .btn {
+      width: 50%;
+      max-width: 220px;
+      margin: 0 0 0 10%; }
+      .index-page .event .cta-btn-block .btn:first-child {
+        margin: 0; }
 
 /*******************************
 
@@ -580,9 +624,19 @@ input[type="text"] {
   z-index: 0;
   overflow: hidden; }
 
+@media screen and (min-width: 1040px) {
+  .index-page .hero {
+    padding-bottom: 40%; } }
 @media screen and (max-width: 980px) {
   .index-page .hero .hero-copy {
-    transform: translate(-50%, -50%); }
+    top: 50px; }
+  .index-page .hero .cta-block {
+    transform: translate(-50%, 80%); }
+  .index-page .mission .block {
+    padding: 200px 6% 70px 0; }
+    .index-page .mission .block .description {
+      font-size: 22px;
+      font-weight: 26px; }
 
   .site-footer .footer-blocks .block {
     width: 45%; }
@@ -618,10 +672,94 @@ input[type="text"] {
   .site-content {
     margin: 20px 0 0; }
 
-  .hero .hero-copy {
-    width: 80%;
-    font-size: 16px;
-    line-height: 18px; }
+  .index-page .hero .hero-copy {
+    width: 90%;
+    top: 20px; }
+    .index-page .hero .hero-copy .description {
+      font-size: 16px;
+      line-height: 18px; }
+  .index-page .event .cta-block .cta-btn-block {
+    max-width: 140px; }
+
+  .site-footer .btn {
+    width: 100%; }
+  .site-footer .footer-logo-wrapper {
+    bottom: 200px;
+    top: initial; }
+  .site-footer .footer-blocks .block {
+    width: 100%;
+    max-width: none;
+    padding: 0 20px 30px; } }
+@media screen and (max-width: 500px) {
+  .site-header .site-nav {
+    margin: 0 0 20px;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none; }
+  .site-header .menu-btn {
+    display: block; }
+
+  .site-content {
+    margin: 20px 0 0; }
+
+  .index-page .hero {
+    padding-bottom: 50%; }
+    .index-page .hero .cta-block {
+      transform: translate(-50%, 90%);
+      width: 90%; }
+    .index-page .hero .hero-copy {
+      width: 90%;
+      top: 20px;
+      font-size: 14px;
+      line-height: 18px; }
+      .index-page .hero .hero-copy .description {
+        width: 90%;
+        top: 20px;
+        font-size: 14px;
+        line-height: 18px; }
+  .index-page .event .cta-block .cta-btn-block {
+    max-width: 140px; }
+
+  .site-footer .btn {
+    width: 100%; }
+  .site-footer .footer-logo-wrapper {
+    bottom: 200px;
+    top: initial; }
+  .site-footer .footer-blocks .block {
+    width: 100%;
+    max-width: none;
+    padding: 0 20px 30px; } }
+@media screen and (max-width: 400px) {
+  .site-header .site-nav {
+    margin: 0 0 20px;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none; }
+  .site-header .menu-btn {
+    display: block; }
+
+  .site-content {
+    margin: 20px 0 0; }
+
+  .index-page .hero {
+    padding-bottom: 70%; }
+    .index-page .hero .cta-block {
+      transform: translate(-50%, 90%);
+      width: 90%; }
+    .index-page .hero .hero-copy {
+      width: 90%;
+      top: 20px;
+      font-size: 14px;
+      line-height: 18px; }
+      .index-page .hero .hero-copy .description {
+        width: 90%;
+        top: 20px;
+        font-size: 14px;
+        line-height: 18px; }
+  .index-page .event .cta-block .cta-btn-block {
+    max-width: 140px; }
 
   .site-footer .btn {
     width: 100%; }
