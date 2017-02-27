@@ -92,7 +92,6 @@ img {
     color: $site-dark-gray;
     background: rgba(255,255,255,0.7);
   }
-
 }
 
 .hr-line {
@@ -109,6 +108,37 @@ img {
   text-indent: -9999999px;
   display: block;
   height: 0;
+}
+
+.social {
+  width: 100%;
+  text-align: center;
+
+  .social-icons {
+    width: 120px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .social-item {
+    float: left;
+    width: 32%;
+    display: inline;
+    a {
+      // display: inline-block;
+    }
+
+    svg.icon {
+      height: 25px;
+      width: auto;
+      fill: $site-dark-gray;
+      @include css3(transition, fill 300ms);
+
+      &:hover {
+        fill: $site-tan;
+      }
+    }
+  }
 }
 
 .dont-break-out {
@@ -200,7 +230,8 @@ input {
 
   .logo-wrapper {
     width: $logo-width;
-    height: $logo-height;
+    // height: $logo-height;
+    height: auto;
     margin: 0 auto;
 
     a {
@@ -213,33 +244,56 @@ input {
     text-align: center;
   }
 
+  .header-top-bar {
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    // .social-icons {
+    //   width: 180px;
+    //   overflow: hidden;
+    // }
+
+    // .social-item {
+    //   float: left;
+    // }
+  }
+
   .menu-btn {
     width: 40px;
     float: right;
     height: 40px;
     display: none;
     background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%);
   }
 
   .menu-nav-btn__bar {
     width: 100%;
-    height: 1px;
-    margin-top: 5px;
+    height: 2px;
+    margin-top: 4px;
     display: inherit;
     -webkit-transition: 400ms;
     transition: 400ms;
-    position: absolute;
+    /* position: absolute; */
     pointer-events: none;
     opacity: 1;
+    border: 1px solid;
+    border-style: solid none none;
   }
 
   .menu-nav-btn__bar:first-child {
     margin-top: 0;
   }
 
-  .menu-nav-btn__bar:last-child {
-    margin-top: 10px;
-  }
+  // .menu-nav-btn__bar:last-child {
+  //   margin-top: 10px;
+  // }
 
   .menu-btn.active {
     height: 40px;
@@ -268,7 +322,7 @@ input {
   text-align: center;
 
   ul {
-    margin: 40px 0;
+    margin: 0 0 20px;
   }
 
   li {
@@ -355,7 +409,9 @@ input {
       top: 50%;
       position: absolute;
       left: 50%;
-      transform: translate(-50%, -70%);
+      transform: translateX(-50%);
+      top: 100px;
+      width: 80%;
 
       p {
         font-size: inherit;
@@ -510,35 +566,31 @@ input {
 
   .social-legal {
     text-align: center;
-    .social {
-      width: 100%;
-      text-align: center;
+    // .social {
+    //   width: 100%;
+    //   text-align: center;
 
-      .social-item {
-        // display: inline-block;
-        display: inline-flex;
-        width: 100%;
-        max-width: 60px;
-        height: 48px;
-          // @include css3(transition, fill 400ms);
+    //   .social-item {
+    //     display: inline-flex;
+    //     width: 100%;
+    //     max-width: 60px;
+    //     height: 48px;
+    //     a {
+    //       display: inline-block;
+    //     }
 
+    //     svg.icon {
+    //       height: 30px;
+    //       width: auto;
+    //       fill: $site-dark-gray;
+    //       @include css3(transition, fill 400ms);
 
-        a {
-          display: inline-block;
-        }
-
-        svg.icon {
-          height: 30px;
-          width: auto;
-          fill: $site-dark-gray;
-          @include css3(transition, fill 400ms);
-
-          &:hover {
-            fill: $site-tan;
-          }
-        }
-      }
-    }
+    //       &:hover {
+    //         fill: $site-tan;
+    //       }
+    //     }
+    //   }
+    // }
     .legal {
       font-size: 16px;
       letter-spacing: 1px;
@@ -588,6 +640,49 @@ input {
 
 @media screen and (max-width: 980px) {
 
+  .index-page {
+    .hero {
+      // padding-bottom: 80%;
+      .hero-copy {
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .site-header {
+    .logo-wrapper {
+      width: 100px;
+    }
+    .site-nav {
+      ul {
+        // padding: 0 0 20px;
+        li {
+          margin: 0 0 0 15px;
+
+          &:first-child {
+            margin: 0;
+          }
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .index-page {
+    .hero {
+      .hero-copy {
+        // width: 80%;
+        font-size: 18px;
+      }
+    }
+  }
+  
+
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:1),(max-width:768px) {
@@ -612,6 +707,31 @@ input {
 //   }
 // }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
 
+  .site-header {
+    .site-nav {
+      margin: 0 0 20px;
+      max-height: 0;
+      padding: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .menu-btn {
+      display: block;
+    }
+  }
+
+  .site-content {
+    margin: 20px 0 0;
+  }
+  
+  .hero {
+    .hero-copy {
+      width: 80%;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
 }

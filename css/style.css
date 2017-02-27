@@ -208,6 +208,29 @@ img {
   display: block;
   height: 0; }
 
+.social {
+  width: 100%;
+  text-align: center; }
+  .social .social-icons {
+    width: 120px;
+    overflow: hidden;
+    margin: 0 auto; }
+  .social .social-item {
+    float: left;
+    width: 32%;
+    display: inline; }
+    .social .social-item svg.icon {
+      height: 25px;
+      width: auto;
+      fill: #414042;
+      -webkit-transition: fill 300ms;
+      -moz-transition: fill 300ms;
+      -ms-transition: fill 300ms;
+      -o-transition: fill 300ms;
+      transition: fill 300ms; }
+      .social .social-item svg.icon:hover {
+        fill: #cd8b59; }
+
 .dont-break-out {
   /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
   /* These are technically the same, but use both */
@@ -284,33 +307,43 @@ input {
     transition: 600ms; }
   .site-header .logo-wrapper {
     width: 132px;
-    height: 132px;
+    height: auto;
     margin: 0 auto; }
     .site-header .logo-wrapper a {
       display: inline-block; }
   .site-header .slogan {
     width: 100%;
     text-align: center; }
+  .site-header .header-top-bar {
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px; }
   .site-header .menu-btn {
     width: 40px;
     float: right;
     height: 40px;
     display: none;
-    background: rgba(255, 255, 255, 0.1); }
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%); }
   .site-header .menu-nav-btn__bar {
     width: 100%;
-    height: 1px;
-    margin-top: 5px;
+    height: 2px;
+    margin-top: 4px;
     display: inherit;
     -webkit-transition: 400ms;
     transition: 400ms;
-    position: absolute;
+    /* position: absolute; */
     pointer-events: none;
-    opacity: 1; }
+    opacity: 1;
+    border: 1px solid;
+    border-style: solid none none; }
   .site-header .menu-nav-btn__bar:first-child {
     margin-top: 0; }
-  .site-header .menu-nav-btn__bar:last-child {
-    margin-top: 10px; }
   .site-header .menu-btn.active {
     height: 40px;
     opacity: 1; }
@@ -330,7 +363,7 @@ input {
 .site-nav {
   text-align: center; }
   .site-nav ul {
-    margin: 40px 0; }
+    margin: 0 0 20px; }
   .site-nav li {
     display: inline-block;
     margin: 0 0 0 20px;
@@ -391,7 +424,9 @@ input {
     top: 50%;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -70%); }
+    transform: translateX(-50%);
+    top: 100px;
+    width: 80%; }
     .index-page .hero .hero-copy p {
       font-size: inherit;
       line-height: inherit; }
@@ -493,27 +528,6 @@ input {
         line-height: 50px; }
   .site-footer .social-legal {
     text-align: center; }
-    .site-footer .social-legal .social {
-      width: 100%;
-      text-align: center; }
-      .site-footer .social-legal .social .social-item {
-        display: inline-flex;
-        width: 100%;
-        max-width: 60px;
-        height: 48px; }
-        .site-footer .social-legal .social .social-item a {
-          display: inline-block; }
-        .site-footer .social-legal .social .social-item svg.icon {
-          height: 30px;
-          width: auto;
-          fill: #414042;
-          -webkit-transition: fill 400ms;
-          -moz-transition: fill 400ms;
-          -ms-transition: fill 400ms;
-          -o-transition: fill 400ms;
-          transition: fill 400ms; }
-          .site-footer .social-legal .social .social-item svg.icon:hover {
-            fill: #cd8b59; }
     .site-footer .social-legal .legal {
       font-size: 16px;
       letter-spacing: 1px;
@@ -550,5 +564,38 @@ input {
   max-height: 0;
   z-index: 0;
   overflow: hidden; }
+
+@media screen and (max-width: 980px) {
+  .index-page .hero .hero-copy {
+    transform: translate(-50%, -50%); } }
+@media screen and (max-width: 768px) {
+  .site-header .logo-wrapper {
+    width: 100px; }
+  .site-header .site-nav ul li {
+    margin: 0 0 0 15px; }
+    .site-header .site-nav ul li:first-child {
+      margin: 0; }
+    .site-header .site-nav ul li a {
+      font-size: 20px; }
+
+  .index-page .hero .hero-copy {
+    font-size: 18px; } }
+@media screen and (max-width: 670px) {
+  .site-header .site-nav {
+    margin: 0 0 20px;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none; }
+  .site-header .menu-btn {
+    display: block; }
+
+  .site-content {
+    margin: 20px 0 0; }
+
+  .hero .hero-copy {
+    width: 80%;
+    font-size: 16px;
+    line-height: 18px; } }
 
 /*# sourceMappingURL=style.css.map */
