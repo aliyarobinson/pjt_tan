@@ -117,7 +117,8 @@ img {
   .social-icons {
     width: 120px;
     overflow: hidden;
-    margin: 0 auto;
+    // margin: 0 auto;
+    float: right;
   }
 
   .social-item {
@@ -305,10 +306,20 @@ input[type="text"] {
   }
 
   .header-top-bar {
-    height: 20px;
+        /* height: 20px; */
     position: absolute;
     top: 20px;
-    right: 20px;
+    /* right: 20px; */
+    width: 100%;
+    overflow: hidden;
+
+    .support-btn {
+      display: none;
+    /* position: absolute; */
+    /* left: 20px; */
+    float: left;
+    margin: 0;
+    }
 
     // .social-icons {
     //   width: 180px;
@@ -487,7 +498,7 @@ input[type="text"] {
     .cta-block {
       background: $site-tan;
       width: 80%;
-      max-width: 620px;
+      max-width: 670px;
       margin: 0 auto;
       position: absolute;
       transform: translate(-50%, 50%);
@@ -615,8 +626,9 @@ input[type="text"] {
 *******************************/
 .site-footer {
   color: $site-dark-gray;
-  padding: 20px 0;
-  margin: 40px 0 0;
+  padding: 40px 0;
+  border: solid 4px $site-yellow;
+  border-style: solid none none;
 
   h3 {
     padding: 0 0 20px;
@@ -764,15 +776,21 @@ input[type="text"] {
       .block {
         padding: 200px 6% 70px 0;
 
+        &:first-child {
+            padding: 200px 6% 70px 6%;
+        }
+
         .description {
           font-size: 22px;
           font-weight: 26px;
+          line-height: 30px;
         }
       }
     }
   }
 
   .site-footer {
+
     .footer-blocks {
       .block {
         width: 45%;
@@ -824,6 +842,21 @@ input[type="text"] {
         font-size: 18px;
       }
     }
+
+    .mission {
+      .block {
+        padding-top: 240px;
+
+        &:first-child {
+          padding-top: 240px;
+        }
+
+        .description {
+          font-size: 20px;
+          line-height: 22px;
+        }
+      }
+    }
   }
   
 
@@ -865,6 +898,12 @@ input[type="text"] {
     .menu-btn {
       display: block;
     }
+
+    .header-top-bar {
+      .support-btn {
+        display: block;
+      }
+    }
   }
 
   .site-content {
@@ -893,12 +932,45 @@ input[type="text"] {
           line-height: 18px;
         }
       }
+
+      .cta-block {
+        width: 100%;
+        padding: 0 0 20px;
+
+        h4 {
+          font-size: 24px;
+        }
+        .instructions {
+          font-size: 18px;
+          line-height: 18px;
+          margin: 0;
+        }
+      }
+    }
+
+    .mission {
+      .block {
+
+        padding-top: 200px;
+
+        &:first-child {
+          padding-top: 200px;
+        }
+
+        h3 {
+          font-size: 40px;
+        }
+        .description {
+            font-size: 18px;
+            line-height: 22px;
+        }
+      }
     }
 
     .event {
-      .cta-block {
-        .cta-btn-block {
-          max-width: 140px;
+      .cta-btn-block {
+        .btn {
+          max-width: 160px;
         }
       }
     }
@@ -943,11 +1015,11 @@ input[type="text"] {
   
   .index-page {
     .hero {
-      padding-bottom: 50%;
-      .cta-block {
-        transform: translate(-50%, 90%);
-        width: 90%;
-      }
+      padding-bottom: 60%;
+      // .cta-block {
+      //   transform: translate(-50%, 90%);
+      //   width: 90%;
+      // }
 
       .hero-copy {
 
@@ -961,6 +1033,28 @@ input[type="text"] {
           top: 20px;
           font-size: 14px;
           line-height: 18px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .mission {
+      .block {
+
+        // padding-top: 200px;
+
+        // &:first-child {
+        //   padding-top: 200px;
+        // }
+
+        h3 {
+          font-size: 30px;
+              padding: 20px 0 10px;
+        }
+        .description {
+            font-size: 15px;
+            line-height: 19px;
+            letter-spacing: 0.3px;
         }
       }
     }
@@ -993,71 +1087,97 @@ input[type="text"] {
 
 @media screen and (max-width: 400px) {
 
-  .site-header {
-    .site-nav {
-      margin: 0 0 20px;
-      max-height: 0;
-      padding: 0;
-      opacity: 0;
-      pointer-events: none;
-    }
+  // .site-header {
+  //   .site-nav {
+  //     margin: 0 0 20px;
+  //     max-height: 0;
+  //     padding: 0;
+  //     opacity: 0;
+  //     pointer-events: none;
+  //   }
 
-    .menu-btn {
-      display: block;
-    }
-  }
+  //   .menu-btn {
+  //     display: block;
+  //   }
+  // }
 
-  .site-content {
-    margin: 20px 0 0;
-  }
+  // .site-content {
+  //   margin: 20px 0 0;
+  // }
   
   .index-page {
     .hero {
       padding-bottom: 70%;
-      .cta-block {
-        transform: translate(-50%, 90%);
-        width: 90%;
+      // .cta-block {
+      //   transform: translate(-50%, 90%);
+      //   width: 90%;
+      // }
+
+      // .hero-copy {
+
+      //   width: 90%;
+      //   top: 20px;
+      //   font-size: 14px;
+      //   line-height: 18px;
+
+      //   .description {
+      //     width: 90%;
+      //     top: 20px;
+      //     font-size: 14px;
+      //     line-height: 18px;
+      //   }
+      // }
+    }
+
+    .mission {
+
+      .bkgd {
+        width: 85%;
+        margin-left: -25%;
       }
+      .block {
+        
+        padding-top: 290px;
 
-      .hero-copy {
+        &:first-child {
+          padding-top: 190px;
+        }
 
-        width: 90%;
-        top: 20px;
-        font-size: 14px;
-        line-height: 18px;
+        h3 {
+          font-size: 30px;
+        }
 
         .description {
-          width: 90%;
-          top: 20px;
           font-size: 14px;
           line-height: 18px;
         }
       }
+      
     }
 
-    .event {
-      .cta-block {
-        .cta-btn-block {
-          max-width: 140px;
-        }
-      }
-    }
+    // .event {
+    //   .cta-block {
+    //     .cta-btn-block {
+    //       max-width: 140px;
+    //     }
+    //   }
+    // }
   }
   
 
-  .site-footer {
-    .btn {
-      width: 100%;
-    }
-    .footer-logo-wrapper {
-      bottom: 200px;
-      top: initial;
-    }
-    .footer-blocks .block {
-      width: 100%;
-      max-width: none;
-      padding: 0 20px 30px;
-    }
-  }
+  // .site-footer {
+  //   .btn {
+  //     width: 100%;
+  //   }
+  //   .footer-logo-wrapper {
+  //     bottom: 200px;
+  //     top: initial;
+  //   }
+  //   .footer-blocks .block {
+  //     width: 100%;
+  //     max-width: none;
+  //     padding: 0 20px 30px;
+  //   }
+  // }
 }
 

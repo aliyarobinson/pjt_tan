@@ -214,7 +214,7 @@ img {
   .social .social-icons {
     width: 120px;
     overflow: hidden;
-    margin: 0 auto; }
+    float: right; }
   .social .social-item {
     float: left;
     width: 32%;
@@ -366,10 +366,18 @@ input[type="text"] {
     width: 100%;
     text-align: center; }
   .site-header .header-top-bar {
-    height: 20px;
+    /* height: 20px; */
     position: absolute;
     top: 20px;
-    right: 20px; }
+    /* right: 20px; */
+    width: 100%;
+    overflow: hidden; }
+    .site-header .header-top-bar .support-btn {
+      display: none;
+      /* position: absolute; */
+      /* left: 20px; */
+      float: left;
+      margin: 0; }
   .site-header .menu-btn {
     width: 40px;
     float: right;
@@ -486,7 +494,7 @@ input[type="text"] {
   .index-page .hero .cta-block {
     background: #cd8b59;
     width: 80%;
-    max-width: 620px;
+    max-width: 670px;
     margin: 0 auto;
     position: absolute;
     transform: translate(-50%, 50%);
@@ -556,8 +564,9 @@ input[type="text"] {
 *******************************/
 .site-footer {
   color: #414042;
-  padding: 20px 0;
-  margin: 40px 0 0; }
+  padding: 40px 0;
+  border: solid 4px #ffde17;
+  border-style: solid none none; }
   .site-footer h3 {
     padding: 0 0 20px; }
   .site-footer .footer-logo-wrapper {
@@ -634,9 +643,12 @@ input[type="text"] {
     transform: translate(-50%, 80%); }
   .index-page .mission .block {
     padding: 200px 6% 70px 0; }
+    .index-page .mission .block:first-child {
+      padding: 200px 6% 70px 6%; }
     .index-page .mission .block .description {
       font-size: 22px;
-      font-weight: 26px; }
+      font-weight: 26px;
+      line-height: 30px; }
 
   .site-footer .footer-blocks .block {
     width: 45%; }
@@ -658,7 +670,14 @@ input[type="text"] {
       font-size: 20px; }
 
   .index-page .hero .hero-copy {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .index-page .mission .block {
+    padding-top: 240px; }
+    .index-page .mission .block:first-child {
+      padding-top: 240px; }
+    .index-page .mission .block .description {
+      font-size: 20px;
+      line-height: 22px; } }
 @media screen and (max-width: 670px) {
   .site-header .site-nav {
     margin: 0 0 20px;
@@ -667,6 +686,8 @@ input[type="text"] {
     opacity: 0;
     pointer-events: none; }
   .site-header .menu-btn {
+    display: block; }
+  .site-header .header-top-bar .support-btn {
     display: block; }
 
   .site-content {
@@ -678,8 +699,26 @@ input[type="text"] {
     .index-page .hero .hero-copy .description {
       font-size: 16px;
       line-height: 18px; }
-  .index-page .event .cta-block .cta-btn-block {
-    max-width: 140px; }
+  .index-page .hero .cta-block {
+    width: 100%;
+    padding: 0 0 20px; }
+    .index-page .hero .cta-block h4 {
+      font-size: 24px; }
+    .index-page .hero .cta-block .instructions {
+      font-size: 18px;
+      line-height: 18px;
+      margin: 0; }
+  .index-page .mission .block {
+    padding-top: 200px; }
+    .index-page .mission .block:first-child {
+      padding-top: 200px; }
+    .index-page .mission .block h3 {
+      font-size: 40px; }
+    .index-page .mission .block .description {
+      font-size: 18px;
+      line-height: 22px; }
+  .index-page .event .cta-btn-block .btn {
+    max-width: 160px; }
 
   .site-footer .btn {
     width: 100%; }
@@ -704,10 +743,7 @@ input[type="text"] {
     margin: 20px 0 0; }
 
   .index-page .hero {
-    padding-bottom: 50%; }
-    .index-page .hero .cta-block {
-      transform: translate(-50%, 90%);
-      width: 90%; }
+    padding-bottom: 60%; }
     .index-page .hero .hero-copy {
       width: 90%;
       top: 20px;
@@ -717,7 +753,15 @@ input[type="text"] {
         width: 90%;
         top: 20px;
         font-size: 14px;
-        line-height: 18px; }
+        line-height: 18px;
+        margin: 0 auto; }
+  .index-page .mission .block h3 {
+    font-size: 30px;
+    padding: 20px 0 10px; }
+  .index-page .mission .block .description {
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.3px; }
   .index-page .event .cta-block .cta-btn-block {
     max-width: 140px; }
 
@@ -731,44 +775,19 @@ input[type="text"] {
     max-width: none;
     padding: 0 20px 30px; } }
 @media screen and (max-width: 400px) {
-  .site-header .site-nav {
-    margin: 0 0 20px;
-    max-height: 0;
-    padding: 0;
-    opacity: 0;
-    pointer-events: none; }
-  .site-header .menu-btn {
-    display: block; }
-
-  .site-content {
-    margin: 20px 0 0; }
-
   .index-page .hero {
     padding-bottom: 70%; }
-    .index-page .hero .cta-block {
-      transform: translate(-50%, 90%);
-      width: 90%; }
-    .index-page .hero .hero-copy {
-      width: 90%;
-      top: 20px;
+  .index-page .mission .bkgd {
+    width: 85%;
+    margin-left: -25%; }
+  .index-page .mission .block {
+    padding-top: 290px; }
+    .index-page .mission .block:first-child {
+      padding-top: 190px; }
+    .index-page .mission .block h3 {
+      font-size: 30px; }
+    .index-page .mission .block .description {
       font-size: 14px;
-      line-height: 18px; }
-      .index-page .hero .hero-copy .description {
-        width: 90%;
-        top: 20px;
-        font-size: 14px;
-        line-height: 18px; }
-  .index-page .event .cta-block .cta-btn-block {
-    max-width: 140px; }
-
-  .site-footer .btn {
-    width: 100%; }
-  .site-footer .footer-logo-wrapper {
-    bottom: 200px;
-    top: initial; }
-  .site-footer .footer-blocks .block {
-    width: 100%;
-    max-width: none;
-    padding: 0 20px 30px; } }
+      line-height: 18px; } }
 
 /*# sourceMappingURL=style.css.map */
