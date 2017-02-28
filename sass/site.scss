@@ -23,7 +23,7 @@ html {
 body {
   font: 100 16px 'Lato', arial, sans-serif;
   color: $font-color;
-  transition: 500ms;
+  @include css3(transition, 500ms);
 }
 
 *,
@@ -284,10 +284,10 @@ input[type="text"] {
   z-index: 5;
   top: 0;
   left: 0;
-  transition: 600ms;
+  @include css3(transition, 600ms);
 
   > * {
-    transition: 600ms;
+    @include css3(transition, 600ms);
   }
 
   .logo-wrapper {
@@ -339,7 +339,7 @@ input[type="text"] {
     position: absolute;
     left: 50%;
     top: 150px;
-    transform: translateX(-50%);
+    @include css3(transform, translateX(-50%));
   }
 
   .menu-nav-btn__bar {
@@ -347,8 +347,7 @@ input[type="text"] {
     height: 2px;
     margin-top: 4px;
     display: inherit;
-    -webkit-transition: 400ms;
-    transition: 400ms;
+    @include css3(transition, 400ms);
     /* position: absolute; */
     pointer-events: none;
     opacity: 1;
@@ -370,14 +369,13 @@ input[type="text"] {
   }
 
   .menu-btn.active .menu-nav-btn__bar {
-    transform: translateY(3px) rotate(-45deg);
-    transform-origin: center center;
-    -webkit-transform-origin: center center;
+    @include css3(transform, translateY(3px) rotate(-45deg));
+    @include css3(transform-origin, center center);
     margin-top: 0px;
   }
 
   .menu-btn.active .menu-nav-btn__bar:first-child {
-    transform: translateY(4px) rotate(45deg);
+    @include css3(transform, translateY(4px) rotate(45deg));
   }
 
   .menu-btn.active .menu-nav-btn__bar:last-child {
@@ -482,7 +480,7 @@ input[type="text"] {
       top: 50%;
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
+      @include css3(transform, translateX(-50%));
       top: 100px;
       width: 80%;
 
@@ -503,7 +501,7 @@ input[type="text"] {
       max-width: 670px;
       margin: 0 auto;
       position: absolute;
-      transform: translate(-50%, 50%);
+      @include css3(transform, translate(-50%, 50%));
       text-align: center;
       padding: 0 50px 20px;
       bottom: 0%;
@@ -565,8 +563,7 @@ input[type="text"] {
       height: 100%;
       position: absolute;
       background: $site-yellow;
-      -webkit-transform: skew(-20deg, 0deg);
-      transform: skew(-20deg, 0deg);
+      @include css3(transform, skew(-20deg, 0deg));
     }
 
     h3 {
@@ -750,7 +747,7 @@ input[type="text"] {
   margin-left: -100px;
   opacity: 1;
   max-height: 900px;
-  transition: 400ms;
+  @include css3(transition, 400ms);
   z-index: 20;
 }
 
@@ -775,13 +772,11 @@ input[type="text"] {
 
   .index-page {
     .hero {
-      // padding-bottom: 80%;
       .hero-copy {
         top: 50px;
-        // transform: translate(-50%, -50%);
       }
       .cta-block {
-        transform: translate(-50%, 80%);
+        @include css3(transform, translate(-50%, 80%));
       }
     }
 
