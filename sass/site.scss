@@ -186,14 +186,15 @@ input {
 
 input[type="text"] {
   width: 40%;
-  color: #414042;
+  font-family: 'lato', arial, sans-serif;
   background: #fff;
   height: 45px;
-  // margin: 0 0 0 5%;
-
-  // &:first-child {
-  //   margin: 0;
-  // }
+  color: $site-dark-gray;
+  font-size: 22px;
+  position: relative;
+  top: 2px;
+  font-weight: 100;
+  padding: 0 0 0 10px;
 }
 
 [type="submit"] {
@@ -215,12 +216,14 @@ input[type="text"] {
   font-size: 22px;
   position: relative;
   top: 2px;
+  font-family: 'lato', arial, sans-serif;
   font-weight: 100;
   padding: 0 0 0 10px;
 }
 :-moz-placeholder {
   color: $site-dark-gray;
   font-size: 22px;
+  font-family: 'lato', arial, sans-serif;
   position: relative;
   top: 2px;
   font-weight: 100;
@@ -228,6 +231,7 @@ input[type="text"] {
 }
 ::-moz-placeholder {
   color: $site-dark-gray;
+  font-family: 'lato', arial, sans-serif;
   font-size: 22px;
   position: relative;
   top: 2px;
@@ -236,6 +240,7 @@ input[type="text"] {
 }
 :-ms-input-placeholder {
   color: $site-dark-gray;
+  font-family: 'lato', arial, sans-serif;
   font-size: 22px;
   position: relative;
   top: 2px;
@@ -325,6 +330,7 @@ input[type="text"] {
       .social-icons {
         position: relative;
         top: 0px;
+        right: -10px;
       }
     }
   }
@@ -558,8 +564,10 @@ input[type="text"] {
     z-index: 1 ;
     position: relative;
 
+    .wrapper {padding: 10px;}
+
     .bkgd {
-      width: 80%;
+      width: 82%;
       float: left;
       margin-left: -30%;
       height: 100%;
@@ -573,11 +581,14 @@ input[type="text"] {
     }
 
     .block {
-      padding: 220px 0 70px 6%;
-      
+      padding: 220px 0 70px;
 
       &:first-child {
-        padding: 200px 6% 70px 0;   
+        padding-right: 50px;   
+      }
+
+      &:last-child {
+        padding-left: 50px;   
       }
 
       p {
@@ -784,10 +795,14 @@ input[type="text"] {
 
     .mission {
       .block {
-        padding: 200px 6% 70px 0;
+        padding: 220px 0 70px;
 
         &:first-child {
-            padding: 200px 6% 70px 6%;
+          padding-right: 50px;   
+        }
+
+        &:last-child {
+          padding-left: 50px;   
         }
 
         .description {
@@ -855,10 +870,14 @@ input[type="text"] {
 
     .mission {
       .block {
-        padding-top: 240px;
-
+        padding: 240px 0 70px;
+        
         &:first-child {
-          padding-top: 240px;
+          padding-right: 50px;   
+        }
+
+        &:last-child {
+          padding-left: 50px;   
         }
 
         .description {
@@ -1005,19 +1024,22 @@ input[type="text"] {
 
     .mission {
       .block {
-
-        padding-top: 200px;
-
+        padding: 200px 0 70px;
+        
         &:first-child {
-          padding-top: 200px;
+          padding-right: 60px;   
+        }
+
+        &:last-child {
+          padding-left: 50px;   
         }
 
         h3 {
-          font-size: 40px;
+          font-size: 36px;
         }
         .description {
-            font-size: 18px;
-            line-height: 22px;
+          font-size: 16px;
+          line-height: 20px;
         }
       }
     }
@@ -1093,23 +1115,55 @@ input[type="text"] {
       }
     }
 
+    // .mission {
+    //   .block {
+    //     padding: 220px 0 70px;
+        
+    //     &:first-child {
+    //       padding-right: 50px;   
+    //     }
+
+    //     &:last-child {
+    //       padding-left: 50px;   
+    //     }
+
+    //     h3 {
+    //       font-size: 30px;
+    //           padding: 20px 0 10px;
+    //     }
+    //     .description {
+    //         font-size: 15px;
+    //         line-height: 19px;
+    //         letter-spacing: 0.3px;
+    //     }
+    //   }
+    // }
+
     .mission {
+
+      .bkgd {
+        width: 85%;
+        margin-left: -25%;
+      }
       .block {
+        padding: 290px 0 70px;
+        
+        &:first-child {
+          padding: 190px 0 70px;
+          padding-right: 50px;   
+        }
 
-        // padding-top: 200px;
-
-        // &:first-child {
-        //   padding-top: 200px;
-        // }
+        &:last-child {
+          padding-left: 50px;   
+        }
 
         h3 {
           font-size: 30px;
-              padding: 20px 0 10px;
         }
+
         .description {
-            font-size: 15px;
-            line-height: 19px;
-            letter-spacing: 0.3px;
+          font-size: 14px;
+          line-height: 18px;
         }
       }
     }
@@ -1191,11 +1245,14 @@ input[type="text"] {
         margin-left: -25%;
       }
       .block {
+        padding: 290px 0 70px;
         
-        padding-top: 290px;
-
         &:first-child {
-          padding-top: 190px;
+          padding-right: 50px;   
+        }
+
+        &:last-child {
+          padding-left: 50px;   
         }
 
         h3 {
@@ -1207,7 +1264,6 @@ input[type="text"] {
           line-height: 18px;
         }
       }
-      
     }
 
     // .event {

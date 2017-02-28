@@ -271,9 +271,15 @@ input {
 
 input[type="text"] {
   width: 40%;
-  color: #414042;
+  font-family: 'lato', arial, sans-serif;
   background: #fff;
-  height: 45px; }
+  height: 45px;
+  color: #414042;
+  font-size: 22px;
+  position: relative;
+  top: 2px;
+  font-weight: 100;
+  padding: 0 0 0 10px; }
 
 [type="submit"] {
   background: transparent;
@@ -293,12 +299,14 @@ input[type="text"] {
   font-size: 22px;
   position: relative;
   top: 2px;
+  font-family: 'lato', arial, sans-serif;
   font-weight: 100;
   padding: 0 0 0 10px; }
 
 :-moz-placeholder {
   color: #414042;
   font-size: 22px;
+  font-family: 'lato', arial, sans-serif;
   position: relative;
   top: 2px;
   font-weight: 100;
@@ -306,6 +314,7 @@ input[type="text"] {
 
 ::-moz-placeholder {
   color: #414042;
+  font-family: 'lato', arial, sans-serif;
   font-size: 22px;
   position: relative;
   top: 2px;
@@ -314,6 +323,7 @@ input[type="text"] {
 
 :-ms-input-placeholder {
   color: #414042;
+  font-family: 'lato', arial, sans-serif;
   font-size: 22px;
   position: relative;
   top: 2px;
@@ -391,7 +401,8 @@ input[type="text"] {
       margin: 0; }
     .site-header .header-top-bar .social .social-icons {
       position: relative;
-      top: 0px; }
+      top: 0px;
+      right: -10px; }
   .site-header .menu-btn {
     width: 40px;
     float: right;
@@ -562,8 +573,10 @@ input[type="text"] {
 .index-page .mission {
   z-index: 1;
   position: relative; }
+  .index-page .mission .wrapper {
+    padding: 10px; }
   .index-page .mission .bkgd {
-    width: 80%;
+    width: 82%;
     float: left;
     margin-left: -30%;
     height: 100%;
@@ -577,9 +590,11 @@ input[type="text"] {
   .index-page .mission h3 {
     text-align: center; }
   .index-page .mission .block {
-    padding: 220px 0 70px 6%; }
+    padding: 220px 0 70px; }
     .index-page .mission .block:first-child {
-      padding: 200px 6% 70px 0; }
+      padding-right: 50px; }
+    .index-page .mission .block:last-child {
+      padding-left: 50px; }
     .index-page .mission .block p {
       font-size: 30px;
       line-height: 40px; }
@@ -700,9 +715,11 @@ input[type="text"] {
     -o-transform: translate(-50%, 80%);
     transform: translate(-50%, 80%); }
   .index-page .mission .block {
-    padding: 200px 6% 70px 0; }
+    padding: 220px 0 70px; }
     .index-page .mission .block:first-child {
-      padding: 200px 6% 70px 6%; }
+      padding-right: 50px; }
+    .index-page .mission .block:last-child {
+      padding-left: 50px; }
     .index-page .mission .block .description {
       font-size: 22px;
       font-weight: 26px;
@@ -730,9 +747,11 @@ input[type="text"] {
   .index-page .hero .hero-copy {
     font-size: 18px; }
   .index-page .mission .block {
-    padding-top: 240px; }
+    padding: 240px 0 70px; }
     .index-page .mission .block:first-child {
-      padding-top: 240px; }
+      padding-right: 50px; }
+    .index-page .mission .block:last-child {
+      padding-left: 50px; }
     .index-page .mission .block .description {
       font-size: 20px;
       line-height: 22px; } }
@@ -801,14 +820,16 @@ input[type="text"] {
       line-height: 18px;
       margin: 0; }
   .index-page .mission .block {
-    padding-top: 200px; }
+    padding: 200px 0 70px; }
     .index-page .mission .block:first-child {
-      padding-top: 200px; }
+      padding-right: 60px; }
+    .index-page .mission .block:last-child {
+      padding-left: 50px; }
     .index-page .mission .block h3 {
-      font-size: 40px; }
+      font-size: 36px; }
     .index-page .mission .block .description {
-      font-size: 18px;
-      line-height: 22px; }
+      font-size: 16px;
+      line-height: 20px; }
   .index-page .event .cta-btn-block .btn {
     max-width: 160px; }
 
@@ -847,13 +868,21 @@ input[type="text"] {
         font-size: 14px;
         line-height: 18px;
         margin: 0 auto; }
-  .index-page .mission .block h3 {
-    font-size: 30px;
-    padding: 20px 0 10px; }
-  .index-page .mission .block .description {
-    font-size: 15px;
-    line-height: 19px;
-    letter-spacing: 0.3px; }
+  .index-page .mission .bkgd {
+    width: 85%;
+    margin-left: -25%; }
+  .index-page .mission .block {
+    padding: 290px 0 70px; }
+    .index-page .mission .block:first-child {
+      padding: 190px 0 70px;
+      padding-right: 50px; }
+    .index-page .mission .block:last-child {
+      padding-left: 50px; }
+    .index-page .mission .block h3 {
+      font-size: 30px; }
+    .index-page .mission .block .description {
+      font-size: 14px;
+      line-height: 18px; }
   .index-page .event .cta-block .cta-btn-block {
     max-width: 140px; }
 
@@ -873,9 +902,11 @@ input[type="text"] {
     width: 85%;
     margin-left: -25%; }
   .index-page .mission .block {
-    padding-top: 290px; }
+    padding: 290px 0 70px; }
     .index-page .mission .block:first-child {
-      padding-top: 190px; }
+      padding-right: 50px; }
+    .index-page .mission .block:last-child {
+      padding-left: 50px; }
     .index-page .mission .block h3 {
       font-size: 30px; }
     .index-page .mission .block .description {
