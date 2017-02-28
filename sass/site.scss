@@ -117,7 +117,8 @@ img {
   .social-icons {
     width: 120px;
     overflow: hidden;
-    // margin: 0 auto;
+    // position: relative;
+    // top: 6px;
     float: right;
   }
 
@@ -294,6 +295,8 @@ input[type="text"] {
     // height: $logo-height;
     height: auto;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 
     a {
       display: inline-block;
@@ -306,29 +309,24 @@ input[type="text"] {
   }
 
   .header-top-bar {
-        /* height: 20px; */
     position: absolute;
-    top: 20px;
-    /* right: 20px; */
+    top: 30px;
     width: 100%;
     overflow: hidden;
+    z-index: 1;
 
     .support-btn {
       display: none;
-    /* position: absolute; */
-    /* left: 20px; */
-    float: left;
-    margin: 0;
+      float: left;
+      margin: 0;
     }
 
-    // .social-icons {
-    //   width: 180px;
-    //   overflow: hidden;
-    // }
-
-    // .social-item {
-    //   float: left;
-    // }
+    .social {
+      .social-icons {
+        position: relative;
+        top: 0px;
+      }
+    }
   }
 
   .menu-btn {
@@ -379,7 +377,11 @@ input[type="text"] {
   }
 
   .menu-btn.active .menu-nav-btn__bar:first-child {
-    transform: translateY(3px) rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  .menu-btn.active .menu-nav-btn__bar:last-child {
+    display: none;
   }
 }
 
@@ -679,6 +681,17 @@ input[type="text"] {
   .social-legal {
     text-align: center;
     margin: 60px 0 100px;
+
+    .social {
+      .social-icons {
+        position: relative;
+        top: 0;
+        float: none;
+        margin: 0 auto;
+      }
+    }
+
+
     // .social {
     //   width: 100%;
     //   text-align: center;
