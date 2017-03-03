@@ -37,6 +37,29 @@ var AYR = AYR || {};
       });
 
 
+
+      /**************************************/
+      /*   To Top Code
+      /***************************************************/
+  
+      $(window).scroll(function() {
+        
+          var yPos = -($(window).scrollTop()); 
+
+          if(yPos <= -240){
+            $('.top').removeClass('hidden');
+          }else{
+            $('.top').addClass('hidden');
+          }
+      });
+
+      $('.top').on('click', function(e){
+        e.preventDefault();
+        AYR.scrollTop();
+      });
+
+
+
       /**************************************/
       /*   Window Scroll
       /***************************************************/
@@ -149,7 +172,14 @@ var AYR = AYR || {};
       if(ayrApi.hasClass(siteHeader, 'mobile-active')){
         siteHeader.classList.remove('mobile-active');
       }
+    },
+
+    scrollTop: function(e){
+     $('html,body').animate({                                                             
+          scrollTop: $('html,body').offset().top
+      }, 1000);
     }
+
   };
 
 })(); // End Self Evoking Function
