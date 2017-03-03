@@ -607,6 +607,10 @@ input[type="text"] {
     height: 100%;
     position: absolute;
     background: #ffde17;
+    background: -moz-linear-gradient(top, #ffde17 0%, rgba(255, 222, 23, 0.8) 51%, rgba(255, 222, 23, 0) 100%);
+    background: -webkit-linear-gradient(top, #ffde17 0%, rgba(255, 222, 23, 0.8) 51%, rgba(255, 222, 23, 0) 100%);
+    background: linear-gradient(to bottom, #ffde17 0%, rgba(255, 222, 23, 0.8) 51%, rgba(255, 222, 23, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffde17', endColorstr='#00ffde17',GradientType=0 );
     -webkit-transform: skew(-20deg, 0deg);
     -moz-transform: skew(-20deg, 0deg);
     -ms-transform: skew(-20deg, 0deg);
@@ -715,7 +719,47 @@ input[type="text"] {
   .inner-page .site-content .support-links ul li {
     width: 30%;
     display: inline-block;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
+  .inner-page .site-content .support-links button.share {
+    margin: 20px 0;
+    font-size: 16px;
+    -webkit-transition: 400px;
+    -moz-transition: 400px;
+    -ms-transition: 400px;
+    -o-transition: 400px;
+    transition: 400px; }
+    .inner-page .site-content .support-links button.share .share-bar-small {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: 0;
+      height: 100%;
+      background: #fff;
+      opacity: 0;
+      pointer-events: none; }
+    .inner-page .site-content .support-links button.share .share-item {
+      width: 50%;
+      height: 100%;
+      font-size: 12px;
+      float: right; }
+      .inner-page .site-content .support-links button.share .share-item:first-child {
+        float: left; }
+      .inner-page .site-content .support-links button.share .share-item a {
+        display: inline-block;
+        width: 100%;
+        line-height: 40px;
+        margin-top: 4px;
+        height: 100%; }
+      .inner-page .site-content .support-links button.share .share-item svg {
+        height: 30px; }
+        .inner-page .site-content .support-links button.share .share-item svg:hover {
+          fill: #ffde17; }
+    .inner-page .site-content .support-links button.share.active, .inner-page .site-content .support-links button.share:hover {
+      padding: 10px 25px; }
+      .inner-page .site-content .support-links button.share.active .share-bar-small, .inner-page .site-content .support-links button.share:hover .share-bar-small {
+        opacity: 1;
+        pointer-events: auto; }
 
 /*******************************
 

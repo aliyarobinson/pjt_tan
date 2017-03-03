@@ -612,6 +612,11 @@ input[type="text"] {
       height: 100%;
       position: absolute;
       background: $site-yellow;
+      background: -moz-linear-gradient(top,  rgba(255,222,23,1) 0%, rgba(255,222,23,0.8) 51%, rgba(255,222,23,0) 100%);
+      background: -webkit-linear-gradient(top,  rgba(255,222,23,1) 0%,rgba(255,222,23,0.8) 51%,rgba(255,222,23,0) 100%);
+      background: linear-gradient(to bottom,  rgba(255,222,23,1) 0%,rgba(255,222,23,0.8) 51%,rgba(255,222,23,0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffde17', endColorstr='#00ffde17',GradientType=0 );
+
       @include css3(transform, skew(-20deg, 0deg));
     }
 
@@ -799,8 +804,65 @@ input[type="text"] {
         width: 30%;
         display: inline-block;
         text-align: center;
+        position: relative;
       }
     }
+
+    button.share {
+      margin: 20px 0;
+      font-size: 16px;
+      @include css3(transition, 400px);
+
+      .share-bar-small {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+        height: 100%;
+        background: #fff;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .share-item {
+        width: 50%;
+        height: 100%;
+        font-size: 12px;
+        float: right;
+
+        &:first-child {
+          float: left;
+        }
+
+        a {
+          display: inline-block;
+          width: 100%;
+          line-height: 40px;
+          margin-top: 4px;
+          height: 100%;
+        }
+
+        svg {
+          height: 30px;
+
+          &:hover {
+            fill:$site-yellow;
+          }
+        }
+      }
+
+      &.active,
+      &:hover {
+        padding: 10px 25px;
+
+        .share-bar-small {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+
+    
   }
 }
 

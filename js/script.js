@@ -58,6 +58,15 @@ var AYR = AYR || {};
         AYR.scrollTop();
       });
 
+      /**************************************/
+      /*   Share button Click Script
+      /***************************************************/
+      $(document).on( 'click', '.share-mod a', function(e) {
+        /*************Open Shares in New Window Code**********/
+        e.preventDefault();
+        var url = $(this).attr('href');
+        OT.popupCenter(url,'shareWindow','600', '600');
+      });
 
 
       /**************************************/
@@ -162,6 +171,29 @@ var AYR = AYR || {};
 
     }, // End Init
 
+    /********************************************************************/
+    /*                                                                  */
+    /*          Opens Share buttons in centered new window              */
+    /*                                                                  */
+    /********************************************************************/
+
+    popupCenter: function(url, title, w, h) {
+      // http://stackoverflow.com/questions/4068373/center-a-popup-window-on-screen
+      var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+      var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+      var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+      var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+      var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+      var top = ((height / 2) - (h / 2)) + dualScreenTop;
+      var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+      // Puts focus on the newWindow
+      if (window.focus) {
+          newWindow.focus();
+      }
+    },
 
     collapseMobileNav: function() {
       // Collapse Mobile Nav When navigation link is clicked in mobile view
