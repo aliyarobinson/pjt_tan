@@ -21,8 +21,7 @@ var AYR = AYR || {};
   /*   Application Object
   /***************************************************/
   AYR = {
-    currPageName:"",
-    contentElement: {},
+    grid : $('.grid'),
 
     init: function () {
       console.log('init');
@@ -56,6 +55,24 @@ var AYR = AYR || {};
       $('.top').on('click', function(e){
         e.preventDefault();
         AYR.scrollTop();
+      });
+
+      $(document).on( 'click', '.filter-btn', function( event ) {
+        console.log('************** filter button click fired *****************');
+        event.preventDefault();
+        var $this = $(this);
+        // var filterGroup = $this.data('filter-group');
+        var filterName = $this.data('filter');
+
+        AYR.filterGrid(filterName);
+
+        // if(filterGroup){
+        //   var newURL = CBCL.baseURL + '#/' + filterGroup + '/' + filterName;
+        // } else {
+        //   var newURL = CBCL.baseURL + '#';
+        // }
+
+        // location.href = newURL;
       });
 
       /**************************************/
@@ -206,6 +223,34 @@ var AYR = AYR || {};
         siteHeader.classList.remove('mobile-active');
       }
     },
+
+    filterGrid: function(filterStr) {
+      console.log('************** filterGrid fired *****************');
+      // var filterString ='.' + elemGroup + '-' + elemFilter;
+      var filterString ='.' + filterStr;
+      console.log('filterString: ',filterString);
+
+      if(!(filterStr === '*')){
+      console.log('************** filter CODE fired *****************');
+
+        AYR.grid.isotope({
+          itemSelector: '.grid-item',
+          filter: filterString,
+          animationEngine: 'best-available',
+          percentPosition: true
+        });
+      } else {
+        console.log('************** filter ALL fired *****************');
+        AYR.grid.isotope({
+
+          filter: '*',
+          animationEngine: 'best-available',
+          percentPosition: true
+        });
+      }
+      // CBCL.scrollTop('html, body', CBCL.siteHeaderHeight);
+    },
+
 
     scrollTop: function(e){
      $('html,body').animate({                                                             
