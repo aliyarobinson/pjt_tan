@@ -768,7 +768,7 @@ input[type="text"] {
 .mission-vision-page .img-wrapper {
   border: 1px solid #ffde17;
   padding-bottom: 50%;
-  background: red;
+  background: #fff;
   background-blend-mode: luminosity;
   background-position: center center;
   background-repeat: no-repeat;
