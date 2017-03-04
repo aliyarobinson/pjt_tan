@@ -761,6 +761,19 @@ input[type="text"] {
         opacity: 1;
         pointer-events: auto; }
 
+.mission-vision-page .our-mission .img-wrapper {
+  background-image: url(../img/mission.jpg); }
+.mission-vision-page .our-vision .img-wrapper {
+  background-image: url(../img/vision.jpg); }
+.mission-vision-page .img-wrapper {
+  border: 1px solid #ffde17;
+  padding-bottom: 50%;
+  background: red;
+  background-blend-mode: luminosity;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 /*******************************
 
   Footer Styles

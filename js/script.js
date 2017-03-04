@@ -2,7 +2,7 @@
 
 var AYR = AYR || {};
 
-(function(){
+(function($){
 
 
   // Cache DOM elements for future use
@@ -63,6 +63,7 @@ var AYR = AYR || {};
       /***************************************************/
       $(document).on( 'click', '.share-mod a', function(e) {
         /*************Open Shares in New Window Code**********/
+        console.log('share clicked');
         e.preventDefault();
         var url = $(this).attr('href');
         OT.popupCenter(url,'shareWindow','600', '600');
@@ -214,6 +215,6 @@ var AYR = AYR || {};
 
   };
 
-})(); // End Self Evoking Function
+})(jQuery); // End Self Evoking Function
 
 AYR.init();

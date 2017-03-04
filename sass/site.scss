@@ -866,6 +866,29 @@ input[type="text"] {
   }
 }
 
+.mission-vision-page {
+  .our-mission .img-wrapper{
+    background-image: url(../img/mission.jpg);
+  }
+
+  .our-vision .img-wrapper {
+    background-image: url(../img/vision.jpg);
+  }
+
+  .img-wrapper {
+    border: 1px solid $site-yellow;
+    padding-bottom: 50%;
+    background: red;
+    background-blend-mode: luminosity;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  
+  
+}
+
 
 
 /*******************************
