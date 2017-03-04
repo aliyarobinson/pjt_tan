@@ -87,6 +87,11 @@ var AYR = AYR || {};
       });
 
 
+      $(document).on( 'click', '.support-links .share', function(e) {
+        console.log('SUPPORT share clicked');
+        $(this).addClass('active');
+      });
+
       /**************************************/
       /*   Window Scroll
       /***************************************************/

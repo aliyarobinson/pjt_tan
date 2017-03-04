@@ -851,8 +851,7 @@ input[type="text"] {
         }
       }
 
-      &.active,
-      &:hover {
+      &.active {
         padding: 10px 25px;
 
         .share-bar-small {
@@ -1694,6 +1693,14 @@ input[type="text"] {
       width: 100%;
       max-width: none;
       padding: 0 20px 30px;
+
+      h3 {
+        font-size: 40px;
+      }
+
+      &:first-child {
+        padding: 0 20px 30px;
+      }
     }
   }
 }
