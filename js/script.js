@@ -29,11 +29,17 @@ var AYR = AYR || {};
       /**************************************/
       /*   Mobile Navigation Trigger
       /***************************************************/
-      menuBtn.addEventListener(clickHandler, function(e) { 
-        this.classList.toggle('active');
-        siteNav.classList.toggle('active');
-        siteHeader.classList.toggle('mobile-active');
-      });
+      // menuBtn.addEventListener(clickHandler, function(e) { 
+      //   this.classList.toggle('active');
+      //   siteNav.classList.toggle('active');
+      //   siteHeader.classList.toggle('mobile-active');
+      // });
+
+      $('.menu-btn').on('click', function() {
+        $(this).toggleClass('active');
+        $('.site-nav').toggleClass('active');
+        $('.site-header').toggleClass('mobile-active');
+      })
 
 
 
