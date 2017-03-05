@@ -754,8 +754,9 @@ input[type="text"] {
           margin: 0;
         }
         
-        a {
-          font-size: 30px;
+        a,
+        button {
+          font: 100 30px 'Lato', arial, sans-serif;
           text-decoration: none;
         }
 
@@ -807,7 +808,6 @@ input[type="text"] {
       .member-title-bar{
         margin:5px 0 0;
         font-size: 24px;
-        // color: $site-light-gray;
       }
 
       .name {
@@ -835,9 +835,14 @@ input[type="text"] {
       }
     }
 
+    a,
+    button {
+      width: 80%;
+    }
+
     button.share {
       margin: 20px 0;
-      font-size: 16px;
+      font: 100 16px 'Lato', arial, sans-serif;
       @include css3(transition, 400px);
 
       .share-bar-small {
@@ -913,25 +918,63 @@ input[type="text"] {
 .events-page {
 
   > * {
-
   }
 
-  .poster-wrapper {
-    display: block;
-    overflow: hidden;
+  .grid {
+    .grid-item {
+
+      float: left;
+      width: 50%;
+      padding: 30px 2%;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+          color: initial;
+        }
+      }
+      .poster-wrapper {
+        display: block;
+        overflow: hidden;
+      }
+
+      .poster {
+        display: block;
+      }
+
+      .title {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 24px;
+
+        a {
+          font-weight: 400;
+        }
+      }
+
+      .desc {
+        display: block;
+
+        a {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+
+      .meta-bar {
+        > * {
+          float: right;
+
+          &:first-child {
+            float: left;
+          }
+        }
+      }
+    }
   }
 
-  .poster {
-    display: block;
-  }
-
-  .title {
-    margin: 0;
-  }
-
-  .desc {
-    display: block;
-  }
 }
 
 .contact-page {
@@ -1323,13 +1366,13 @@ input[type="text"] {
       ul {
         // padding: 0 0 20px;
         li {
-          margin: 0 0 0 15px;
+          margin: 0 0 0 10px;
 
           &:first-child {
             margin: 0;
           }
           a {
-            font-size: 20px;
+            font-size: 18px;
           }
         }
       }
