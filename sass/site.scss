@@ -53,8 +53,13 @@ a,button {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 100;
+  @include css3(transition, 300ms);
+
+  &:hover {
+    color: $site-light-gray;
+  }
 }
 
 button {
@@ -77,6 +82,7 @@ img {
 .btn {
   display: inline-block;
   text-align: center;
+  text-decoration: none;
   position: relative;
   padding: 10px;
   border: 1px solid $site-yellow;
@@ -84,6 +90,10 @@ img {
   margin: 20px 0;
   color: $site-dark-gray;
   @include css3(transition, all 300ms);
+
+  &:hover {
+    color: initial;
+  }
 
   &.light:hover {
     background: rgba(200,100,50,0.7);
@@ -416,6 +426,10 @@ input[type="text"] {
     font-size: 30px;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .btn {
     margin: 0;
   }
@@ -438,6 +452,10 @@ input[type="text"] {
     &.active {
       padding: 10px;
       background: $site-yellow;
+
+      a:hover {
+        color: initial;
+      }
     }
 
     a {
@@ -658,7 +676,7 @@ input[type="text"] {
     }
 
     .cta-btn-block {
-      margin: 30px 0 40px;
+      margin: 30px 0 60px;
 
       .btn {
         width: 50%;
@@ -883,9 +901,43 @@ input[type="text"] {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
 
-  
-  
+.events-page {
+
+  > * {
+
+  }
+
+  .poster-wrapper {
+    display: block;
+    overflow: hidden;
+  }
+
+  .poster {
+    display: block;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .desc {
+    display: block;
+  }
+}
+
+.contact-page {
+  section {
+    text-align: center;
+  }
+
+  .social-links {
+    li {
+      float: left;
+      width: 30%;
+    }
+  }
 }
 
 
@@ -1644,42 +1696,65 @@ input[type="text"] {
   }
 
   .inner-page {
-
-    p {
-      font-size: 20px;
-      line-height: 24px;
-    }
-
-    h3 {
-      font-size: 22px;
-    }
-
-    .sub-nav {
-      ul {
-        li {
-          margin: 0;
-
-          a {
-            font-size: 18px;
+    .site-content {
+      h3 {
+        font-size: 20px;
+      }
+      
+      p {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      
+      .sub-nav {
+        ul {
+          li {
+            a {
+              font-size: 20px;
+            }
           }
         }
       }
     }
-
-    .site-content {
-      padding: 0 20px;
-    }
-
-    .team-member {
-      width: 100%;
-      max-width: none;
-      padding: 0;
-
-      &:nth-child(odd) {
-        padding: 0;
-      }
-    }
   }
+
+  // .inner-page {
+
+  //   p {
+  //     font-size: 20px;
+  //     line-height: 24px;
+  //   }
+
+  //   h3 {
+  //     font-size: 22px;
+  //   }
+
+  //   .sub-nav {
+  //     ul {
+  //       li {
+  //         margin: 0;
+
+  //         a {
+  //           font-size: 18px;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .site-content {
+  //     padding: 0 20px;
+  //   }
+
+  //   .team-member {
+  //     width: 100%;
+  //     max-width: none;
+  //     padding: 0;
+
+  //     &:nth-child(odd) {
+  //       padding: 0;
+  //     }
+  //   }
+  // }
   
 
   .site-footer {
@@ -1707,47 +1782,9 @@ input[type="text"] {
 }
 
 @media screen and (max-width: 400px) {
-
-  // .site-header {
-  //   .site-nav {
-  //     margin: 0 0 20px;
-  //     max-height: 0;
-  //     padding: 0;
-  //     opacity: 0;
-  //     pointer-events: none;
-  //   }
-
-  //   .menu-btn {
-  //     display: block;
-  //   }
-  // }
-
-  // .site-content {
-  //   margin: 20px 0 0;
-  // }
-  
   .index-page {
     .hero {
       padding-bottom: 70%;
-      // .cta-block {
-      //   transform: translate(-50%, 90%);
-      //   width: 90%;
-      // }
-
-      // .hero-copy {
-
-      //   width: 90%;
-      //   top: 20px;
-      //   font-size: 14px;
-      //   line-height: 18px;
-
-      //   .description {
-      //     width: 90%;
-      //     top: 20px;
-      //     font-size: 14px;
-      //     line-height: 18px;
-      //   }
-      // }
     }
 
     .mission {
@@ -1777,30 +1814,6 @@ input[type="text"] {
         }
       }
     }
-
-    // .event {
-    //   .cta-block {
-    //     .cta-btn-block {
-    //       max-width: 140px;
-    //     }
-    //   }
-    // }
   }
-  
-
-  // .site-footer {
-  //   .btn {
-  //     width: 100%;
-  //   }
-  //   .footer-logo-wrapper {
-  //     bottom: 200px;
-  //     top: initial;
-  //   }
-  //   .footer-blocks .block {
-  //     width: 100%;
-  //     max-width: none;
-  //     padding: 0 20px 30px;
-  //   }
-  // }
 }
 

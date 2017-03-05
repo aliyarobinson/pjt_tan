@@ -133,7 +133,7 @@ html {
 
 body {
   font: 100 16px 'Lato', arial, sans-serif;
-  color: #767676;
+  color: #414042;
   -webkit-transition: 500ms;
   -moz-transition: 500ms;
   -ms-transition: 500ms;
@@ -163,8 +163,15 @@ a, button {
 
 a {
   color: inherit;
-  text-decoration: none;
-  font-weight: 100; }
+  text-decoration: underline;
+  font-weight: 100;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
+  a:hover {
+    color: #a9a59f; }
 
 button {
   border: none;
@@ -182,6 +189,7 @@ img {
 .btn {
   display: inline-block;
   text-align: center;
+  text-decoration: none;
   position: relative;
   padding: 10px;
   border: 1px solid #ffde17;
@@ -193,6 +201,8 @@ img {
   -ms-transition: all 300ms;
   -o-transition: all 300ms;
   transition: all 300ms; }
+  .btn:hover {
+    color: initial; }
   .btn.light:hover {
     background: rgba(200, 100, 50, 0.7); }
   .btn.dark:hover {
@@ -483,6 +493,8 @@ input[type="text"] {
   text-align: center; }
   .site-nav h2 {
     font-size: 30px; }
+  .site-nav a {
+    text-decoration: none; }
   .site-nav .btn {
     margin: 0; }
   .site-nav ul {
@@ -497,6 +509,8 @@ input[type="text"] {
     .site-nav li.active {
       padding: 10px;
       background: #ffde17; }
+      .site-nav li.active a:hover {
+        color: initial; }
     .site-nav li a {
       font-size: 22px;
       border: 1px solid transparent;
@@ -640,7 +654,7 @@ input[type="text"] {
     max-width: 680px;
     display: inline-block; }
   .index-page .event .cta-btn-block {
-    margin: 30px 0 40px; }
+    margin: 30px 0 60px; }
     .index-page .event .cta-btn-block .btn {
       width: 50%;
       max-width: 220px;
@@ -775,6 +789,22 @@ input[type="text"] {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+.events-page .poster-wrapper {
+  display: block;
+  overflow: hidden; }
+.events-page .poster {
+  display: block; }
+.events-page .title {
+  margin: 0; }
+.events-page .desc {
+  display: block; }
+
+.contact-page section {
+  text-align: center; }
+.contact-page .social-links li {
+  float: left;
+  width: 30%; }
 
 /*******************************
 
@@ -1274,23 +1304,13 @@ input[type="text"] {
   .index-page .event .cta-block .cta-btn-block {
     max-width: 140px; }
 
-  .inner-page p {
-    font-size: 20px;
-    line-height: 24px; }
-  .inner-page h3 {
-    font-size: 22px; }
-  .inner-page .sub-nav ul li {
-    margin: 0; }
-    .inner-page .sub-nav ul li a {
-      font-size: 18px; }
-  .inner-page .site-content {
-    padding: 0 20px; }
-  .inner-page .team-member {
-    width: 100%;
-    max-width: none;
-    padding: 0; }
-    .inner-page .team-member:nth-child(odd) {
-      padding: 0; }
+  .inner-page .site-content h3 {
+    font-size: 20px; }
+  .inner-page .site-content p {
+    font-size: 18px;
+    line-height: 22px; }
+  .inner-page .site-content .sub-nav ul li a {
+    font-size: 20px; }
 
   .site-footer .btn {
     width: 100%; }
