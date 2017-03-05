@@ -748,18 +748,26 @@ input[type="text"] {
         float: left;
         padding: 10px 10px 6px;
         margin: 0 0 0 4%;
+        @include css3(transition, 300ms);
 
         &:first-child {
           margin: 0;
         }
+        
+        a {
+          font-size: 30px;
+          text-decoration: none;
+        }
 
         &:hover {
           background: $site-yellow;
-        }
+          text-decoration: none;
+          color: initial;
 
-
-        a {
-          font-size: 30px;
+          a {
+            text-decoration: none;
+            color: initial;
+          }
         }
 
         &.non-link {
@@ -799,6 +807,7 @@ input[type="text"] {
       .member-title-bar{
         margin:5px 0 0;
         font-size: 24px;
+        // color: $site-light-gray;
       }
 
       .name {
@@ -878,8 +887,6 @@ input[type="text"] {
         }
       }
     }
-
-    
   }
 }
 
@@ -990,6 +997,12 @@ input[type="text"] {
       h3 {
         margin: 0;
         line-height: 50px;
+        padding: 0 0 10px;
+      }
+
+      .instructions {
+        line-height: 18px;
+        padding: 0 0 10px;
       }
 
       input[type="text"] {
@@ -1241,6 +1254,10 @@ input[type="text"] {
 }
 @media screen and (max-width: 980px) {
 
+  .wrapper {
+    width: 90%;
+  }
+
   .index-page {
     .hero {
       .hero-copy {
@@ -1290,7 +1307,7 @@ input[type="text"] {
 
     .footer-logo-wrapper {
       bottom: 190px;
-      top: initial;
+      top: auto;
     }
   }
 
@@ -1578,7 +1595,7 @@ input[type="text"] {
     }
     .footer-logo-wrapper {
       bottom: 200px;
-      top: initial;
+      top: auto;
     }
     .footer-blocks .block {
       width: 100%;
@@ -1715,6 +1732,14 @@ input[type="text"] {
           }
         }
       }
+
+      .the-team {
+        .team-member {
+          .member-title-bar {
+            font-size: 18px;
+          }
+        }
+      }
     }
   }
 
@@ -1763,7 +1788,7 @@ input[type="text"] {
     }
     .footer-logo-wrapper {
       bottom: 200px;
-      top: initial;
+      top: auto;
     }
     .footer-blocks .block {
       width: 100%;
@@ -1814,6 +1839,21 @@ input[type="text"] {
         }
       }
     }
+  }
+
+  .inner-page {
+    .site-content{
+      .block.team-member:nth-child(odd){
+        padding: 0;
+      }
+
+      .the-team {
+        .team-member {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    } 
   }
 }
 

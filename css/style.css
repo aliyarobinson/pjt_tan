@@ -696,13 +696,24 @@ input[type="text"] {
     .inner-page .site-content .sub-nav ul li {
       float: left;
       padding: 10px 10px 6px;
-      margin: 0 0 0 4%; }
+      margin: 0 0 0 4%;
+      -webkit-transition: 300ms;
+      -moz-transition: 300ms;
+      -ms-transition: 300ms;
+      -o-transition: 300ms;
+      transition: 300ms; }
       .inner-page .site-content .sub-nav ul li:first-child {
         margin: 0; }
-      .inner-page .site-content .sub-nav ul li:hover {
-        background: #ffde17; }
       .inner-page .site-content .sub-nav ul li a {
-        font-size: 30px; }
+        font-size: 30px;
+        text-decoration: none; }
+      .inner-page .site-content .sub-nav ul li:hover {
+        background: #ffde17;
+        text-decoration: none;
+        color: initial; }
+        .inner-page .site-content .sub-nav ul li:hover a {
+          text-decoration: none;
+          color: initial; }
       .inner-page .site-content .sub-nav ul li.non-link {
         font-size: 30px; }
         .inner-page .site-content .sub-nav ul li.non-link:hover {
@@ -838,7 +849,11 @@ input[type="text"] {
       float: right; }
       .site-footer .footer-blocks .footer-subscribe h3 {
         margin: 0;
-        line-height: 50px; }
+        line-height: 50px;
+        padding: 0 0 10px; }
+      .site-footer .footer-blocks .footer-subscribe .instructions {
+        line-height: 18px;
+        padding: 0 0 10px; }
       .site-footer .footer-blocks .footer-subscribe input[type="text"] {
         margin: 0 0 10px;
         background: #ffde17;
@@ -1092,6 +1107,9 @@ input[type="text"] {
   .index-page .hero {
     padding-bottom: 40%; } }
 @media screen and (max-width: 980px) {
+  .wrapper {
+    width: 90%; }
+
   .index-page .hero .hero-copy {
     top: 50px; }
   .index-page .hero .cta-block {
@@ -1119,7 +1137,7 @@ input[type="text"] {
     margin: 300px 0 100px; }
   .site-footer .footer-logo-wrapper {
     bottom: 190px;
-    top: initial; } }
+    top: auto; } }
 @media screen and (max-width: 768px) {
   .site-header .logo-wrapper {
     width: 100px; }
@@ -1255,7 +1273,7 @@ input[type="text"] {
     width: 100%; }
   .site-footer .footer-logo-wrapper {
     bottom: 200px;
-    top: initial; }
+    top: auto; }
   .site-footer .footer-blocks .block {
     width: 100%;
     max-width: none;
@@ -1311,12 +1329,14 @@ input[type="text"] {
     line-height: 22px; }
   .inner-page .site-content .sub-nav ul li a {
     font-size: 20px; }
+  .inner-page .site-content .the-team .team-member .member-title-bar {
+    font-size: 18px; }
 
   .site-footer .btn {
     width: 100%; }
   .site-footer .footer-logo-wrapper {
     bottom: 200px;
-    top: initial; }
+    top: auto; }
   .site-footer .footer-blocks .block {
     width: 100%;
     max-width: none;
@@ -1341,6 +1361,12 @@ input[type="text"] {
       font-size: 30px; }
     .index-page .mission .block .description {
       font-size: 14px;
-      line-height: 18px; } }
+      line-height: 18px; }
+
+  .inner-page .site-content .block.team-member:nth-child(odd) {
+    padding: 0; }
+  .inner-page .site-content .the-team .team-member {
+    width: 100%;
+    padding: 0; } }
 
 /*# sourceMappingURL=style.css.map */
