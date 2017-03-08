@@ -342,7 +342,9 @@ input[type="text"] {
     margin-top: 4px;
     height: 100%; }
   .share-item svg {
-    height: 30px; }
+    height: 24px;
+    position: relative;
+    top: 3px; }
     .share-item svg:hover {
       fill: #ffde17; }
 
@@ -414,7 +416,6 @@ input[type="text"] {
 
 *******************************/
 .site-header {
-  padding: 20px 0 0;
   width: 100%;
   z-index: 5;
   top: 0;
@@ -431,11 +432,12 @@ input[type="text"] {
     -o-transition: 600ms;
     transition: 600ms; }
   .site-header .logo-wrapper {
-    width: 132px;
+    width: 120px;
     height: auto;
     margin: 0 auto;
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    padding: 20px 0; }
     .site-header .logo-wrapper span {
       pointer-events: none; }
     .site-header .logo-wrapper a {
@@ -609,11 +611,12 @@ input[type="text"] {
   width: 100%;
   padding-bottom: 50%;
   text-align: center;
+  background-color: #fff;
   background-image: url(../img/home-img.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: luminosity;
+  background-blend-mode: hard-light;
   z-index: 2;
   position: relative;
   font-size: 24px;
@@ -825,6 +828,7 @@ input[type="text"] {
     .inner-page .site-content .support-links button.share.active {
       padding: 10px 25px; }
       .inner-page .site-content .support-links button.share.active .share-bar-small {
+        padding: 0 25%;
         opacity: 1;
         pointer-events: auto; }
 
@@ -1239,13 +1243,15 @@ input[type="text"] {
     top: auto; } }
 @media screen and (max-width: 768px) {
   .site-header .logo-wrapper {
-    width: 100px; }
+    width: 90px; }
   .site-header .site-nav ul li {
     margin: 0 0 0 10px; }
     .site-header .site-nav ul li:first-child {
       margin: 0; }
     .site-header .site-nav ul li a {
       font-size: 18px; }
+  .site-header .header-top-bar {
+    top: 52px; }
 
   .index-page .hero .hero-copy {
     font-size: 18px; }
@@ -1263,9 +1269,16 @@ input[type="text"] {
     font-size: 20px; } }
 @media screen and (max-width: 670px) {
   .site-header .wrapper {
-    padding: 0 0 28px; }
+    padding: 20px 0 28px; }
   .site-header h2 {
     font-size: 26px; }
+  .site-header .logo-wrapper {
+    padding: 8px 0 20px; }
+    .site-header .logo-wrapper:after {
+      padding: 8px;
+      top: calc(50% - 8px); }
+  .site-header .slogan {
+    font-size: 24px; }
   .site-header .menu-btn.active {
     position: fixed;
     top: 0;
@@ -1332,7 +1345,10 @@ input[type="text"] {
             width: 60%; }
   .site-header .menu-btn {
     display: block;
-    top: 135px; }
+    top: 172px; }
+  .site-header .header-top-bar .social {
+    position: relative;
+    top: 7px; }
   .site-header .header-top-bar .support-btn {
     display: block; }
 
@@ -1373,6 +1389,22 @@ input[type="text"] {
     .inner-page .site-content .sub-nav ul li a,
     .inner-page .site-content .sub-nav ul li button {
       font: 100 24px 'Lato', arial, sans-serif; }
+  .inner-page .site-content .support-links {
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms; }
+    .inner-page .site-content .support-links > ul li {
+      width: 48%; }
+      .inner-page .site-content .support-links > ul li:last-child {
+        width: 100%; }
+    .inner-page .site-content .support-links .share-bar-small {
+      padding: 0 15%; }
+    .inner-page .site-content .support-links button.share {
+      width: 30%; }
+    .inner-page .site-content .support-links .share-item.twitter {
+      width: 48%; }
 
   .events-page .site-content .grid .grid-item {
     width: 100%; }

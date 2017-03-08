@@ -266,7 +266,9 @@ input[type="text"] {
   }
 
   svg {
-    height: 30px;
+    height: 24px;
+    position: relative;
+    top: 3px;
 
     &:hover {
       fill:$site-yellow;
@@ -347,7 +349,7 @@ input[type="text"] {
 
 *******************************/
 .site-header {
-  padding: 20px 0 0;
+  // padding: 20px 0 0;
   width: 100%;
   z-index: 5;
   top: 0;
@@ -365,6 +367,7 @@ input[type="text"] {
     margin: 0 auto;
     position: relative;
     z-index: 2;
+    padding: 20px 0;
 
     span {
       pointer-events: none;
@@ -586,12 +589,13 @@ input[type="text"] {
     width: 100%;
     padding-bottom: 50%;
     text-align: center;
+    background-color: #fff;
     background-image: url(../img/home-img.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    // background-blend-mode: hard-light;
-    background-blend-mode: luminosity;
+    background-blend-mode: hard-light;
+    // background-blend-mode: luminosity;
     z-index: 2;
     position: relative;
     font-size: 24px;
@@ -913,48 +917,11 @@ input[type="text"] {
       font: 100 16px 'Lato', arial, sans-serif;
       @include css3(transition, 400px);
 
-      // .share-bar-small {
-      //   position: absolute;
-      //   top: 0;
-      //   width: 100%;
-      //   left: 0;
-      //   height: 100%;
-      //   background: #fff;
-      //   opacity: 0;
-      //   pointer-events: none;
-      // }
-
-      // .share-item {
-      //   width: 50%;
-      //   height: 100%;
-      //   font-size: 12px;
-      //   float: right;
-
-      //   &:first-child {
-      //     float: left;
-      //   }
-
-      //   a {
-      //     display: inline-block;
-      //     width: 100%;
-      //     line-height: 40px;
-      //     margin-top: 4px;
-      //     height: 100%;
-      //   }
-
-      //   svg {
-      //     height: 30px;
-
-      //     &:hover {
-      //       fill:$site-yellow;
-      //     }
-      //   }
-      // }
-
       &.active {
         padding: 10px 25px;
 
         .share-bar-small {
+          padding: 0 25%;
           opacity: 1;
           pointer-events: auto;
         }
@@ -1492,7 +1459,7 @@ input[type="text"] {
 
   .site-header {
     .logo-wrapper {
-      width: 100px;
+      width: 90px;
     }
     .site-nav {
       ul {
@@ -1508,6 +1475,9 @@ input[type="text"] {
           }
         }
       }
+    }
+    .header-top-bar {
+      top: 52px;
     }
   }
   .index-page {
@@ -1578,11 +1548,24 @@ input[type="text"] {
   .site-header {
 
     .wrapper {
-      padding: 0 0 28px;
+      padding: 20px 0 28px;
     }
 
     h2 {
       font-size: 26px;
+    }
+
+    .logo-wrapper {
+      padding: 8px 0 20px;
+
+      &:after {
+        padding: 8px;
+        top: calc(50% - 8px);
+      }
+    }
+
+    .slogan {
+      font-size: 24px;
     }
 
     .menu-btn.active {
@@ -1677,16 +1660,20 @@ input[type="text"] {
 
     .menu-btn {
       display: block;
-      top: 135px;
+      top: 172px;
     }
 
     .header-top-bar {
+      .social {
+        position: relative;
+        top: 7px;
+      }
+
       .support-btn {
         display: block;
       }
     }
   }
-
   .site-content {
     margin: 20px 0 0;
   }
@@ -1775,6 +1762,30 @@ input[type="text"] {
           }
         }
       }
+      .support-links {
+        @include css3(transition, all 400ms);
+        > ul {
+          li {
+            width: 48%;
+
+            &:last-child {
+              width: 100%;
+            }
+          }
+        }
+        .share-bar-small {
+          padding: 0 15%;
+        }
+
+        button.share {
+          width: 30%;
+        }
+
+        .share-item.twitter {
+          width: 48%;
+        }
+      }
+
     }
     
   }
