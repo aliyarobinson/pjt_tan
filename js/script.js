@@ -60,7 +60,13 @@ var AYR = AYR || {};
 
       $('.top').on('click', function(e){
         e.preventDefault();
-        AYR.scrollTop();
+        AYR.scrollTo( e, 'html,body');
+      });
+
+      $('.soft-scroll').on('click', function(e){
+        e.preventDefault();
+        let scrollElem = $(this).attr('href');
+        AYR.scrollTo( e, scrollElem);
       });
 
       $(document).on( 'click', '.filter-btn', function( event ) {
@@ -263,9 +269,9 @@ var AYR = AYR || {};
     },
 
 
-    scrollTop: function(e){
+    scrollTo: function(e, elem){
      $('html,body').animate({                                                             
-          scrollTop: $('html,body').offset().top
+          scrollTop: $(elem).offset().top
       }, 1000);
     }
 

@@ -204,7 +204,7 @@ img {
   .btn:hover {
     color: initial; }
   .btn.light:hover {
-    background: rgba(200, 100, 50, 0.7); }
+    background: rgba(255, 222, 23, 0.7); }
   .btn.dark:hover {
     color: #414042;
     background: rgba(255, 255, 255, 0.7); }
@@ -247,7 +247,7 @@ img {
       -o-transition: fill 300ms;
       transition: fill 300ms; }
       .social .social-item svg.icon:hover {
-        fill: #cd8b59; }
+        fill: #ffde17; }
 
 .dont-break-out {
   /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
@@ -610,7 +610,7 @@ input[type="text"] {
     .index-page .hero .hero-copy .btn {
       text-shadow: initial; }
   .index-page .hero .cta-block {
-    background: #cd8b59;
+    background: #ffde17;
     width: 80%;
     max-width: 670px;
     margin: 0 auto;
@@ -673,7 +673,7 @@ input[type="text"] {
       line-height: 40px; }
 .index-page .event {
   text-align: center;
-  background: #cd8b59;
+  background: #ffde17;
   color: #fff; }
   .index-page .event h3 {
     padding: 40px 0; }
@@ -1261,7 +1261,7 @@ input[type="text"] {
       z-index: 5;
       top: 0;
       left: 0;
-      background: #cd8b59; }
+      background: #ffde17; }
       .site-header .site-nav.active ul {
         margin: 100px 0 0; }
         .site-header .site-nav.active ul li {
