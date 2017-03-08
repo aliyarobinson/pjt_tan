@@ -77,6 +77,7 @@ var AYR = AYR || {};
         var filterName = $this.data('filter');
 
         AYR.filterGrid(filterName);
+        AYR.scrollTo( event, '.sub-nav');
 
         // if(filterGroup){
         //   var newURL = CBCL.baseURL + '#/' + filterGroup + '/' + filterName;

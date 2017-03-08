@@ -72,6 +72,10 @@ button {
   &:first-child {
     margin:0;
   }
+
+  &.hover-effect:hover {
+    color: $site-light-gray;
+  }
 }
 
 img {
@@ -119,6 +123,7 @@ img {
   text-indent: -9999999px;
   display: block;
   height: 0;
+  pointer-events: none;
 }
 
 .clear-fix {
@@ -364,6 +369,25 @@ input[type="text"] {
 
     a {
       display: inline-block;
+    }
+
+    &:after {
+      content: '';
+      background: rgba(255, 222, 23, 0.44);
+      box-shadow: 0 0 10px $site-yellow;
+      display: block;
+      border-radius: 50%;
+      padding: 10px;
+      position: absolute;
+      pointer-events: none;
+      @include css3(transform, translate(-50%, -50%) );
+      top: 50%;
+      left: 50%;
+      @include css3(transition, 400ms);
+    }
+
+    &:hover:after {
+      @include css3(transform, translate(-50%, -50%) scale(5) );
     }
   }
 
@@ -975,8 +999,7 @@ input[type="text"] {
 
 .events-page {
 
-  > * {
-  }
+  
   .site-content {
     .grid {
       .grid-item {
@@ -1007,6 +1030,10 @@ input[type="text"] {
           padding: 10px 0;
           font-size: 24px;
 
+          &:hover {
+          color: $site-light-gray;
+        }
+
           a {
             font-weight: 400;
           }
@@ -1014,9 +1041,15 @@ input[type="text"] {
 
         .desc {
           display: block;
+          line-height: 22px;
+          margin: 0 0 20px;
 
           p {
             line-height: 18px;
+
+            &:hover {
+          color: $site-light-gray;
+        }
           }
 
           a {
@@ -1056,6 +1089,12 @@ input[type="text"] {
                 content: '';
               }         
             }
+          }
+        }
+
+        &:hover {
+          a {
+            color: $site-light-gray;
           }
         }
       }
@@ -1491,8 +1530,18 @@ input[type="text"] {
       }
     }
   }
-  
 
+  .events-page {
+    .site-content {
+      .grid {
+        .grid-item {
+          .title {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width:1024px) and (-webkit-min-device-pixel-ratio:1),(max-width:768px) {
@@ -1712,7 +1761,8 @@ input[type="text"] {
 
             margin: 0 0 0 2%;
 
-            a {
+            a,
+            button {
              font: 100 24px 'Lato', arial, sans-serif;
             }
           }
@@ -1720,6 +1770,16 @@ input[type="text"] {
       }
     }
     
+  }
+
+  .events-page {
+    .site-content {
+      .grid {
+        .grid-item {
+          width: 100%;
+        }
+      }
+    }
   }
   
 
@@ -1860,7 +1920,8 @@ input[type="text"] {
       .sub-nav {
         ul {
           li {
-            a {
+            a,
+            button {
               font-size: 20px;
             }
           }
