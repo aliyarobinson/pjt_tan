@@ -684,7 +684,7 @@ input[type="text"] {
   .index-page .mission .bkgd {
     width: 82%;
     float: left;
-    margin-left: -30%;
+    margin-left: 54%;
     height: 100%;
     position: absolute;
     background: #ffde17;
@@ -1444,9 +1444,6 @@ input[type="text"] {
         font-size: 14px;
         line-height: 18px;
         margin: 0 auto; }
-  .index-page .mission .bkgd {
-    width: 85%;
-    margin-left: -25%; }
   .index-page .mission .block {
     padding: 290px 0 70px; }
     .index-page .mission .block:first-child {
@@ -1498,9 +1495,6 @@ input[type="text"] {
 @media screen and (max-width: 400px) {
   .index-page .hero {
     padding-bottom: 70%; }
-  .index-page .mission .bkgd {
-    width: 85%;
-    margin-left: -25%; }
   .index-page .mission .block {
     padding: 290px 0 70px; }
     .index-page .mission .block:first-child {

@@ -138,7 +138,15 @@ var AYR = AYR || {};
       /*   Window Load
       /***************************************************/
       window.onload = function (e,afterPages) {
-        ayrApi.toTop();
+
+        var yPos = -($(window).scrollTop()); 
+
+          if(yPos <= -240){
+            $('.top').removeClass('hidden');
+          }else{
+            $('.top').addClass('hidden');
+          }
+        // ayrApi.toTop();
 
       }
 
