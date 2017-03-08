@@ -123,7 +123,6 @@ img {
   text-indent: -9999999px;
   display: block;
   height: 0;
-  pointer-events: none;
 }
 
 .clear-fix {
@@ -221,7 +220,7 @@ input[type="text"] {
   background: transparent;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: $site-dark-gray;
   border: $site-yellow solid 2px;
   border-style: none none solid;
   max-width: 100px;
@@ -366,6 +365,10 @@ input[type="text"] {
     margin: 0 auto;
     position: relative;
     z-index: 2;
+
+    span {
+      pointer-events: none;
+    }
 
     a {
       display: inline-block;
@@ -623,11 +626,13 @@ input[type="text"] {
     }
 
     .cta-block {
-      background: $site-yellow;
+      background: #fff;
+      color: $site-dark-gray;
       width: 80%;
       max-width: 670px;
       margin: 0 auto;
       position: absolute;
+      box-shadow: 0 0 10px $site-dark-gray;
       @include css3(transform, translate(-50%, 50%));
       text-align: center;
       padding: 0 50px 20px;
@@ -638,6 +643,7 @@ input[type="text"] {
         color: $site-yellow;
         font-style: italic;
         padding: 20px 0 0;
+        font-weight: 400;
       }
 
       p {
@@ -648,7 +654,7 @@ input[type="text"] {
       .instructions {
         font-size: 20px;
         line-height: 20px;
-        color: #fff;
+        // color: #fff;
       }
 
       input[type="text"] {
@@ -657,6 +663,7 @@ input[type="text"] {
         // background: #fff;
         // height: 45px;
         margin: 0 0 0 5%;
+        background: $site-yellow;
 
         &:first-child {
           margin: 0;
@@ -724,8 +731,8 @@ input[type="text"] {
 
   .event {
     text-align: center;
-    background: $site-yellow;
-    color: #fff;
+    background: #fff;
+    color: $site-dark-gray;
 
     h3 {
       padding: 40px 0;
@@ -1339,76 +1346,76 @@ input[type="text"] {
 
 @-ms-keyframes fade-in-dwn-3 {
   0%   { top: 144px; opacity: 0;  }
-  100% { top: 192px; opacity: 1; } 
+  100% { top: 200px; opacity: 1; } 
 }
 @-mos-keyframes fade-in-dwn-3 {
   0%   { top: 144px; opacity: 0;  }
-  100% { top: 192px; opacity: 1; }  
+  100% { top: 200px; opacity: 1; }  
 }
 @-webkit-keyframes fade-in-dwn-3 {
   0%   { top: 144px; opacity: 0;  }
-  100% { top: 192px; opacity: 1; } 
+  100% { top: 200px; opacity: 1; } 
 }
 @keyframes fade-in-dwn-3 {
   0%   { top: 144px; opacity: 0;  }
-  100% { top: 192px; opacity: 1; } 
+  100% { top: 200px; opacity: 1; } 
 }
 
 
 
 @-ms-keyframes fade-in-dwn-4 {
   0%   { top: 188px; opacity: 0;  }
-  100% { top: 236px; opacity: 1; } 
+  100% { top: 248px; opacity: 1; } 
 }
 @-mos-keyframes fade-in-dwn-4 {
   0%   { top: 188px; opacity: 0;  }
-  100% { top: 236px; opacity: 1; } 
+  100% { top: 248px; opacity: 1; } 
 }
 @-webkit-keyframes fade-in-dwn-4 {
   0%   { top: 188px; opacity: 0;  }
-  100% { top: 236px; opacity: 1; } 
+  100% { top: 248px; opacity: 1; } 
 }
 @keyframes fade-in-dwn-4 {
   0%   { top: 188px; opacity: 0;  }
-  100% { top: 236px; opacity: 1; } 
+  100% { top: 248px; opacity: 1; } 
 }
 
 
 
 @-ms-keyframes fade-in-dwn-5 {
   0%   { top: 232px; opacity: 0;  }
-  100% { top: 280px; opacity: 1; } 
+  100% { top: 300px; opacity: 1; } 
 }
 @-mos-keyframes fade-in-dwn-5 {
   0%   { top: 232px; opacity: 0;  }
-  100% { top: 280px; opacity: 1; } 
+  100% { top: 300px; opacity: 1; } 
 }
 @-webkit-keyframes fade-in-dwn-5 {
   0%   { top: 232px; opacity: 0;  }
-  100% { top: 280px; opacity: 1; }  
+  100% { top: 300px; opacity: 1; }  
 }
 @keyframes fade-in-dwn-5 {
   0%   { top: 232px; opacity: 0;  }
-  100% { top: 280px; opacity: 1; } 
+  100% { top: 300px; opacity: 1; } 
 }
 
 
 
 @-ms-keyframes fade-in-dwn-6 {
   0%   { top: 276px; opacity: 0;  }
-  100% { top: 324px; opacity: 1; } 
+  100% { top: 344px; opacity: 1; } 
 }
 @-mos-keyframes fade-in-dwn-6 {
   0%   { top: 276px; opacity: 0;  }
-  100% { top: 324px; opacity: 1; } 
+  100% { top: 344px; opacity: 1; } 
 }
 @-webkit-keyframes fade-in-dwn-6 {
   0%   { top: 276px; opacity: 0;  }
-  100% { top: 324px; opacity: 1; }  
+  100% { top: 344px; opacity: 1; }  
 }
 @keyframes fade-in-dwn-6 {
   0%   { top: 276px; opacity: 0;  }
-  100% { top: 324px; opacity: 1; } 
+  100% { top: 344px; opacity: 1; } 
 }
 
 
@@ -1620,7 +1627,7 @@ input[type="text"] {
         z-index: 5;
         top: 0;
         left: 0;
-        background: $site-yellow;
+        background: #fff;
 
         ul {
           margin: 100px 0 0;
@@ -1657,7 +1664,7 @@ input[type="text"] {
 
             a {
               font-size: 30px;
-              color: #fff;
+              color: $site-dark-gray;
             }
 
             .btn {
