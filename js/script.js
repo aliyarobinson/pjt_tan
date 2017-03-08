@@ -89,7 +89,7 @@ var AYR = AYR || {};
         console.log('share clicked');
         e.preventDefault();
         var url = $(this).attr('href');
-        OT.popupCenter(url,'shareWindow','600', '600');
+        AYR.popupCenter(url,'shareWindow','600', '600');
       });
 
 
