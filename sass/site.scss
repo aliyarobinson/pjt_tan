@@ -360,6 +360,10 @@ input[type="text"] {
     @include css3(transition, 600ms);
   }
 
+  &.mobile-active {
+    height: 100%;
+  }
+
   .logo-wrapper {
     width: $logo-width;
     // height: $logo-height;
@@ -693,6 +697,7 @@ input[type="text"] {
   .mission {
     z-index: 1 ;
     position: relative;
+    overflow: hidden;
 
     .wrapper {padding: 10px;}
 
@@ -1568,6 +1573,10 @@ input[type="text"] {
       font-size: 24px;
     }
 
+    .mobile-active {
+      height: 100%;
+    }
+
     .menu-btn.active {
       position: fixed;
       top: 0;
@@ -1602,7 +1611,7 @@ input[type="text"] {
       
       &.active {
         pointer-events: auto;
-        max-height: 4000px;
+        max-height: 600px;
         opacity: 1;
         position: fixed;
         width: 100%;

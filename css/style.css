@@ -431,6 +431,8 @@ input[type="text"] {
     -ms-transition: 600ms;
     -o-transition: 600ms;
     transition: 600ms; }
+  .site-header.mobile-active {
+    height: 100%; }
   .site-header .logo-wrapper {
     width: 120px;
     height: auto;
@@ -678,7 +680,8 @@ input[type="text"] {
         margin: 0; }
 .index-page .mission {
   z-index: 1;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .index-page .mission .wrapper {
     padding: 10px; }
   .index-page .mission .bkgd {
@@ -1279,6 +1282,8 @@ input[type="text"] {
       top: calc(50% - 8px); }
   .site-header .slogan {
     font-size: 24px; }
+  .site-header .mobile-active {
+    height: 100%; }
   .site-header .menu-btn.active {
     position: fixed;
     top: 0;
@@ -1311,7 +1316,7 @@ input[type="text"] {
       transform: translateX(-50%); }
     .site-header .site-nav.active {
       pointer-events: auto;
-      max-height: 4000px;
+      max-height: 600px;
       opacity: 1;
       position: fixed;
       width: 100%;
