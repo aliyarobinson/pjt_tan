@@ -29,11 +29,6 @@ var AYR = AYR || {};
       /**************************************/
       /*   Mobile Navigation Trigger
       /***************************************************/
-      // menuBtn.addEventListener(clickHandler, function(e) { 
-      //   this.classList.toggle('active');
-      //   siteNav.classList.toggle('active');
-      //   siteHeader.classList.toggle('mobile-active');
-      // });
 
       $('.menu-btn').on('click', function() {
         $(this).toggleClass('active');
@@ -48,14 +43,16 @@ var AYR = AYR || {};
       /***************************************************/
   
       $(window).scroll(function() {
-        
-          var yPos = -($(window).scrollTop()); 
 
-          if(yPos <= -240){
-            $('.top').removeClass('hidden');
-          }else{
-            $('.top').addClass('hidden');
-          }
+        AYR.addTopLink();
+        
+          // var yPos = -($(window).scrollTop()); 
+
+          // if(yPos <= -240){
+          //   $('.top').removeClass('hidden');
+          // }else{
+          //   $('.top').addClass('hidden');
+          // }
       });
 
       $('.top').on('click', function(e){
@@ -93,15 +90,13 @@ var AYR = AYR || {};
       /***************************************************/
       $(document).on( 'click', '.share-mod a', function(e) {
         /*************Open Shares in New Window Code**********/
-        console.log('share clicked');
         e.preventDefault();
         var url = $(this).attr('href');
         AYR.popupCenter(url,'shareWindow','600', '600');
       });
 
-
+      /*************Support Us Share Click Code**********/
       $(document).on( 'click', '.support-links .share', function(e) {
-        console.log('SUPPORT share clicked');
         $(this).addClass('active');
       });
 
@@ -109,36 +104,7 @@ var AYR = AYR || {};
       /**************************************/
       /*   Scrollbar Activation
       /***************************************************/
-      $(".site-nav").mCustomScrollbar();
-
-      
-      /**************************************/
-      /*   Window Scroll
-      /***************************************************/
-      // Reference: https://developer.mozilla.org/en-US/docs/Web/Events/scroll
-      // Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
-
-      // function doSomething(scroll_pos) {
-      //   if(ayrApi.isMobile() === false) {
-      //     if(last_known_scroll_position >= 100 ){
-      //       siteHeader.classList.add('small');
-      //     }else{
-      //       siteHeader.classList.remove('small');
-      //     }
-      //   }
-      // }
-
-      // window.addEventListener('scroll', function(e) {
-      //   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      //   last_known_scroll_position = scrollTop;
-      //   if (!ticking) {
-      //     window.requestAnimationFrame(function() {
-      //       doSomething(last_known_scroll_position);
-      //       ticking = false;
-      //     });
-      //   }
-      //   ticking = true;
-      // });
+      $(".site-nav.active").mCustomScrollbar();
 
 
       /**************************************/
@@ -146,21 +112,37 @@ var AYR = AYR || {};
       /***************************************************/
       window.onload = function (e,afterPages) {
 
-        var yPos = -($(window).scrollTop()); 
+        AYR.addTopLink();
 
-          if(yPos <= -240){
-            $('.top').removeClass('hidden');
-          }else{
-            $('.top').addClass('hidden');
-          }
+        // var yPos = -($(window).scrollTop()); 
+
+        // if(yPos <= -240){
+        //   $('.top').removeClass('hidden');
+        // }else{
+        //   $('.top').addClass('hidden');
+        // }
+
         // ayrApi.toTop();
-
       }
 
 
       /**************************************/
       /*   Window Resize
       /***************************************************/
+
+      $(window).on('resize', function(argument) {
+        console.log('resize: ', $(window).width());
+
+        if(AYR.isMobile()){
+          console.log('mobile');
+        } else{
+          console.log('not mobile');
+          $('.site-header').removeClass('mobile-active');
+          $('.menu-btn').removeClass('active');
+          $('.site-nav').removeClass('active');
+        }
+      });
+
       // Reference: https://developer.mozilla.org/en-US/docs/Web/Events/resize
       var optimizedResize = (function() {
           var callbacks = [],
@@ -284,6 +266,28 @@ var AYR = AYR || {};
       // CBCL.scrollTop('html, body', CBCL.siteHeaderHeight);
     },
 
+
+    addTopLink: function(argument) {
+      var yPos = -($(window).scrollTop()); 
+
+      if(yPos <= -240){
+        $('.top').removeClass('hidden');
+      }else{
+        $('.top').addClass('hidden');
+      }
+    },
+
+     isMobile: function(){
+      // var mobileWidth = 950;
+      var mobileWidth = 670;
+      var isiPad = navigator.userAgent.match(/iPad/i) != null;
+
+      if (($(window).width() < mobileWidth) || isiPad  ) {
+        return true;
+      } else {
+        return false;
+      }
+    },
 
     scrollTo: function(e, elem){
      $('html,body').animate({                                                             
