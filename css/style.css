@@ -594,6 +594,8 @@ input[type="text"] {
       padding: 0; }
       .site-nav li:last-child.active .btn {
         margin: 0; }
+  .site-nav.small-mobile ul li a {
+    font-size: 12px !important; }
 
 /*******************************
 
@@ -1316,7 +1318,7 @@ input[type="text"] {
       transform: translateX(-50%); }
     .site-header .site-nav.active {
       pointer-events: auto;
-      max-height: 600px;
+      max-height: 1000px;
       opacity: 1;
       position: fixed;
       width: 100%;
@@ -1326,7 +1328,9 @@ input[type="text"] {
       left: 0;
       background: #fff; }
       .site-header .site-nav.active ul {
-        margin: 100px 0 0; }
+        margin: 100px 0 0;
+        height: 100%;
+        max-height: 310px; }
         .site-header .site-nav.active ul li {
           display: block;
           margin: 0 0 10px;

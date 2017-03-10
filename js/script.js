@@ -90,13 +90,20 @@ var AYR = AYR || {};
       /**************************************/
       /*   Scrollbar Activation
       /***************************************************/
-      $(".site-nav.active").mCustomScrollbar();
+      // if(AYR.isMobile()){
+      //   $(".site-nav ul").mCustomScrollbar();
+      // }
+      
 
       /**************************************/
       /*   Window Load
       /***************************************************/
       window.onload = function (e,afterPages) {
         AYR.addTopLink();
+
+        if(AYR.isShortMobile()){
+          siteNav.addClass('small-mobile');
+        } 
       }
 
       /**************************************/
@@ -105,12 +112,17 @@ var AYR = AYR || {};
       $(window).on('resize', function(argument) {
 
         if(AYR.isMobile()){
-          console.log('mobile');
+          if(AYR.isShortMobile()){
+            siteNav.addClass('small-mobile');
+          } else {
+            siteNav.removeClass('small-mobile');
+          }
         } else{
           console.log('not mobile');
           siteHeader.removeClass('mobile-active');
           menuBtn.removeClass('active');
           siteNav.removeClass('active');
+          siteNav.removeClass('small-mobile');
         }
       });
 
@@ -182,6 +194,20 @@ var AYR = AYR || {};
       var isiPad = navigator.userAgent.match(/iPad/i) != null;
 
       if (($(window).width() < mobileWidth) || isiPad  ) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+
+    isShortMobile: function(){
+      console.log('shortMobile called');
+
+      var mobileHeight = 340;
+
+      if (($(window).height() < mobileHeight)) {
+      console.log('shortMobile TRUE');
+
         return true;
       } else {
         return false;
