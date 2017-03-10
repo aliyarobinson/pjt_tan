@@ -6,13 +6,9 @@ var AYR = AYR || {};
 
 
   // Cache DOM elements for future use
-  var mainContent = document.querySelector('main');
-  var loader = document.querySelector('.loader-wrapper');
-  var menuBtn = document.querySelector('.menu-btn');
-  var siteNav = document.querySelector('.site-nav');
-  var siteHeader = document.querySelector('.site-header');
-  var last_known_scroll_position = 0;
-  var ticking = false;
+  var menuBtn = $('.menu-btn');
+  var siteNav = $('.site-nav');
+  var siteHeader = $('.site-header');
 
   // If ontouchstart exists then set click handler to touchstart otherwise set clickhandler to click
   var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
@@ -29,30 +25,17 @@ var AYR = AYR || {};
       /**************************************/
       /*   Mobile Navigation Trigger
       /***************************************************/
-
-      $('.menu-btn').on('click', function() {
+      menuBtn.on('click', function() {
         $(this).toggleClass('active');
-        $('.site-nav').toggleClass('active');
-        $('.site-header').toggleClass('mobile-active');
-      })
-
-
+        siteNav.toggleClass('active');
+        siteHeader.toggleClass('mobile-active');
+      });
 
       /**************************************/
-      /*   To Top Code
+      /*   Scroll Event Code
       /***************************************************/
-  
       $(window).scroll(function() {
-
         AYR.addTopLink();
-        
-          // var yPos = -($(window).scrollTop()); 
-
-          // if(yPos <= -240){
-          //   $('.top').removeClass('hidden');
-          // }else{
-          //   $('.top').addClass('hidden');
-          // }
       });
 
       $('.top').on('click', function(e){
@@ -66,6 +49,10 @@ var AYR = AYR || {};
         AYR.scrollTo( e, scrollElem);
       });
 
+
+      /**************************************/
+      /*   Event Filter
+      /***************************************************/
       $(document).on( 'click', '.filter-btn', function( event ) {
         console.log('************** filter button click fired *****************');
         event.preventDefault();
@@ -100,107 +87,32 @@ var AYR = AYR || {};
         $(this).addClass('active');
       });
 
-
       /**************************************/
       /*   Scrollbar Activation
       /***************************************************/
       $(".site-nav.active").mCustomScrollbar();
 
-
       /**************************************/
       /*   Window Load
       /***************************************************/
       window.onload = function (e,afterPages) {
-
         AYR.addTopLink();
-
-        // var yPos = -($(window).scrollTop()); 
-
-        // if(yPos <= -240){
-        //   $('.top').removeClass('hidden');
-        // }else{
-        //   $('.top').addClass('hidden');
-        // }
-
-        // ayrApi.toTop();
       }
-
 
       /**************************************/
       /*   Window Resize
       /***************************************************/
-
       $(window).on('resize', function(argument) {
-        console.log('resize: ', $(window).width());
 
         if(AYR.isMobile()){
           console.log('mobile');
         } else{
           console.log('not mobile');
-          $('.site-header').removeClass('mobile-active');
-          $('.menu-btn').removeClass('active');
-          $('.site-nav').removeClass('active');
+          siteHeader.removeClass('mobile-active');
+          menuBtn.removeClass('active');
+          siteNav.removeClass('active');
         }
       });
-
-      // Reference: https://developer.mozilla.org/en-US/docs/Web/Events/resize
-      var optimizedResize = (function() {
-          var callbacks = [],
-              running = false;
-          
-          // fired on resize event
-          function resize() {
-              if (!running) {
-                  running = true;
-                  if (window.requestAnimationFrame) {
-                      window.requestAnimationFrame(runCallbacks);
-                  } else {
-                      setTimeout(runCallbacks, 66);
-                  }
-              }
-          }
-
-          // run the actual callbacks
-          function runCallbacks() {
-              callbacks.forEach(function(callback) {
-                  callback();
-              });
-              running = false;
-          }
-
-          // adds callback to loop
-          function addCallback(callback) {
-              if (callback) {
-                  callbacks.push(callback);
-              }
-          }
-
-          return {
-              // public method to add additional callback
-              add: function(callback) {
-                  if (!callbacks.length) {
-                      window.addEventListener('resize', resize);
-                  }
-                  addCallback(callback);
-              }
-          }
-      }());
-
-      // start process
-      // optimizedResize.add(function() {
-      //   if(ayrApi.isMobile()){
-      //     siteHeader.classList.remove('small');
-      //   } else {
-      //     if(last_known_scroll_position >= 100 ){
-      //       siteHeader.classList.add('small');
-      //     }else{
-      //       siteHeader.classList.remove('small');
-      //     }
-      //   }
-
-      //   // Resize Content Display Wrapper based on new height of content on resize
-      //   contentDisplayWrapper.style.height = document.querySelector('.content-pages > .' + AYR.currPageName + '-page').offsetHeight + 'px';
-      // });
 
     }, // End Init
 
@@ -209,7 +121,6 @@ var AYR = AYR || {};
     /*          Opens Share buttons in centered new window              */
     /*                                                                  */
     /********************************************************************/
-
     popupCenter: function(url, title, w, h) {
       // http://stackoverflow.com/questions/4068373/center-a-popup-window-on-screen
       var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
@@ -225,17 +136,6 @@ var AYR = AYR || {};
       // Puts focus on the newWindow
       if (window.focus) {
           newWindow.focus();
-      }
-    },
-
-    collapseMobileNav: function() {
-      // Collapse Mobile Nav When navigation link is clicked in mobile view
-      if(ayrApi.hasClass(siteNav, 'active')){
-        siteNav.classList.remove('active');
-        menuBtn.classList.remove('active');
-      }
-      if(ayrApi.hasClass(siteHeader, 'mobile-active')){
-        siteHeader.classList.remove('mobile-active');
       }
     },
 
@@ -266,7 +166,6 @@ var AYR = AYR || {};
       // CBCL.scrollTop('html, body', CBCL.siteHeaderHeight);
     },
 
-
     addTopLink: function(argument) {
       var yPos = -($(window).scrollTop()); 
 
@@ -277,7 +176,7 @@ var AYR = AYR || {};
       }
     },
 
-     isMobile: function(){
+    isMobile: function(){
       // var mobileWidth = 950;
       var mobileWidth = 670;
       var isiPad = navigator.userAgent.match(/iPad/i) != null;
