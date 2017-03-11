@@ -594,8 +594,6 @@ input[type="text"] {
       padding: 0; }
       .site-nav li:last-child.active .btn {
         margin: 0; }
-  .site-nav.small-mobile ul li a {
-    font-size: 12px !important; }
 
 /*******************************
 
@@ -1076,140 +1074,308 @@ input[type="text"] {
     top: 100px;
     opacity: 0; }
   100% {
-    top: 148px;
+    top: 155px;
     opacity: 1; } }
 @-mos-keyframes fade-in-dwn-2 {
   0% {
     top: 100px;
     opacity: 0; }
   100% {
-    top: 148px;
+    top: 155px;
     opacity: 1; } }
 @-webkit-keyframes fade-in-dwn-2 {
   0% {
     top: 100px;
     opacity: 0; }
   100% {
-    top: 148px;
+    top: 155px;
     opacity: 1; } }
 @keyframes fade-in-dwn-2 {
   0% {
     top: 100px;
     opacity: 0; }
   100% {
-    top: 148px;
+    top: 155px;
     opacity: 1; } }
 @-ms-keyframes fade-in-dwn-3 {
   0% {
-    top: 144px;
+    top: 155px;
     opacity: 0; }
   100% {
-    top: 200px;
+    top: 210px;
     opacity: 1; } }
 @-mos-keyframes fade-in-dwn-3 {
   0% {
-    top: 144px;
+    top: 155px;
     opacity: 0; }
   100% {
-    top: 200px;
+    top: 210px;
     opacity: 1; } }
 @-webkit-keyframes fade-in-dwn-3 {
   0% {
-    top: 144px;
+    top: 155px;
     opacity: 0; }
   100% {
-    top: 200px;
+    top: 210px;
     opacity: 1; } }
 @keyframes fade-in-dwn-3 {
   0% {
-    top: 144px;
+    top: 155px;
     opacity: 0; }
   100% {
-    top: 200px;
+    top: 210px;
     opacity: 1; } }
 @-ms-keyframes fade-in-dwn-4 {
   0% {
-    top: 188px;
+    top: 210px;
     opacity: 0; }
   100% {
-    top: 248px;
+    top: 265px;
     opacity: 1; } }
 @-mos-keyframes fade-in-dwn-4 {
   0% {
-    top: 188px;
+    top: 210px;
     opacity: 0; }
   100% {
-    top: 248px;
+    top: 265px;
     opacity: 1; } }
 @-webkit-keyframes fade-in-dwn-4 {
   0% {
-    top: 188px;
+    top: 210px;
     opacity: 0; }
   100% {
-    top: 248px;
+    top: 265px;
     opacity: 1; } }
 @keyframes fade-in-dwn-4 {
   0% {
-    top: 188px;
+    top: 210px;
     opacity: 0; }
   100% {
-    top: 248px;
+    top: 265px;
     opacity: 1; } }
 @-ms-keyframes fade-in-dwn-5 {
   0% {
-    top: 232px;
+    top: 265px;
     opacity: 0; }
   100% {
-    top: 300px;
+    top: 320px;
     opacity: 1; } }
 @-mos-keyframes fade-in-dwn-5 {
   0% {
-    top: 232px;
+    top: 265px;
     opacity: 0; }
   100% {
-    top: 300px;
+    top: 320px;
     opacity: 1; } }
 @-webkit-keyframes fade-in-dwn-5 {
   0% {
-    top: 232px;
+    top: 265px;
     opacity: 0; }
   100% {
-    top: 300px;
+    top: 320px;
     opacity: 1; } }
 @keyframes fade-in-dwn-5 {
   0% {
-    top: 232px;
+    top: 265px;
     opacity: 0; }
   100% {
-    top: 300px;
+    top: 320px;
     opacity: 1; } }
 @-ms-keyframes fade-in-dwn-6 {
   0% {
-    top: 276px;
+    top: 265px;
     opacity: 0; }
   100% {
-    top: 344px;
+    top: 375px;
     opacity: 1; } }
 @-mos-keyframes fade-in-dwn-6 {
   0% {
-    top: 276px;
+    top: 265px;
     opacity: 0; }
   100% {
-    top: 344px;
+    top: 375px;
     opacity: 1; } }
 @-webkit-keyframes fade-in-dwn-6 {
   0% {
-    top: 276px;
+    top: 265px;
     opacity: 0; }
   100% {
-    top: 344px;
+    top: 375px;
     opacity: 1; } }
 @keyframes fade-in-dwn-6 {
   0% {
-    top: 276px;
+    top: 265px;
     opacity: 0; }
   100% {
-    top: 344px;
+    top: 375px;
+    opacity: 1; } }
+@-ms-keyframes fade-in-dwn-sm-1 {
+  0% {
+    top: 0px;
+    opacity: 0; }
+  100% {
+    top: 100px;
+    opacity: 1; } }
+@-mos-keyframes fade-in-dwn-sm-1 {
+  0% {
+    top: 0px;
+    opacity: 0; }
+  100% {
+    top: 100px;
+    opacity: 1; } }
+@-webkit-keyframes fade-in-dwn-sm-1 {
+  0% {
+    top: 0px;
+    opacity: 0; }
+  100% {
+    top: 100px;
+    opacity: 1; } }
+@keyframes fade-in-dwn-sm-1 {
+  0% {
+    top: 0px;
+    opacity: 0; }
+  100% {
+    top: 100px;
+    opacity: 1; } }
+@-ms-keyframes fade-in-dwn-sm-2 {
+  0% {
+    top: 100px;
+    opacity: 0; }
+  100% {
+    top: 128px;
+    opacity: 1; } }
+@-mos-keyframes fade-in-dwn-sm-2 {
+  0% {
+    top: 100px;
+    opacity: 0; }
+  100% {
+    top: 128px;
+    opacity: 1; } }
+@-webkit-keyframes fade-in-dwn-sm-2 {
+  0% {
+    top: 100px;
+    opacity: 0; }
+  100% {
+    top: 128px;
+    opacity: 1; } }
+@keyframes fade-in-dwn-sm-2 {
+  0% {
+    top: 100px;
+    opacity: 0; }
+  100% {
+    top: 128px;
+    opacity: 1; } }
+@-ms-keyframes fade-in-dwn-sm-3 {
+  0% {
+    top: 128px;
+    opacity: 0; }
+  100% {
+    top: 156px;
+    opacity: 1; } }
+@-mos-keyframes fade-in-dwn-sm-3 {
+  0% {
+    top: 128px;
+    opacity: 0; }
+  100% {
+    top: 156px;
+    opacity: 1; } }
+@-webkit-keyframes fade-in-dwn-sm-3 {
+  0% {
+    top: 128px;
+    opacity: 0; }
+  100% {
+    top: 156px;
+    opacity: 1; } }
+@keyframes fade-in-dwn-sm-3 {
+  0% {
+    top: 128px;
+    opacity: 0; }
+  100% {
+    top: 156px;
+    opacity: 1; } }
+@-ms-keyframes fade-in-dwn-sm-4 {
+  0% {
+    top: 156px;
+    opacity: 0; }
+  100% {
+    top: 184px;
+    opacity: 1; } }
+@-mos-keyframes fade-in-dwn-sm-4 {
+  0% {
+    top: 156px;
+    opacity: 0; }
+  100% {
+    top: 184px;
+    opacity: 1; } }
+@-webkit-keyframes fade-in-dwn-sm-4 {
+  0% {
+    top: 156px;
+    opacity: 0; }
+  100% {
+    top: 184px;
+    opacity: 1; } }
+@keyframes fade-in-dwn-sm-4 {
+  0% {
+    top: 156px;
+    opacity: 0; }
+  100% {
+    top: 184px;
+    opacity: 1; } }
+@-ms-keyframes fade-in-dwn-sm-5 {
+  0% {
+    top: 184px;
+    opacity: 0; }
+  100% {
+    top: 212px;
+    opacity: 1; } }
+@-mos-keyframes fade-in-dwn-sm-5 {
+  0% {
+    top: 184px;
+    opacity: 0; }
+  100% {
+    top: 212px;
+    opacity: 1; } }
+@-webkit-keyframes fade-in-dwn-sm-5 {
+  0% {
+    top: 184px;
+    opacity: 0; }
+  100% {
+    top: 212px;
+    opacity: 1; } }
+@keyframes fade-in-dwn-sm-5 {
+  0% {
+    top: 184px;
+    opacity: 0; }
+  100% {
+    top: 212px;
+    opacity: 1; } }
+@-ms-keyframes fade-in-dwn-sm-6 {
+  0% {
+    top: 212px;
+    opacity: 0; }
+  100% {
+    top: 240px;
+    opacity: 1; } }
+@-mos-keyframes fade-in-dwn-sm-6 {
+  0% {
+    top: 212px;
+    opacity: 0; }
+  100% {
+    top: 240px;
+    opacity: 1; } }
+@-webkit-keyframes fade-in-dwn-sm-6 {
+  0% {
+    top: 212px;
+    opacity: 0; }
+  100% {
+    top: 240px;
+    opacity: 1; } }
+@keyframes fade-in-dwn-sm-6 {
+  0% {
+    top: 212px;
+    opacity: 0; }
+  100% {
+    top: 240px;
     opacity: 1; } }
 @media screen and (min-width: 1040px) {
   .index-page .hero {
@@ -1336,22 +1502,38 @@ input[type="text"] {
           margin: 0 0 10px;
           width: 100%; }
           .site-header .site-nav.active ul li.i01 {
-            animation: fade-in-dwn-1 400ms .2s ease-out forwards; }
+            animation: fade-in-dwn-1 400ms 0.2s ease-out forwards; }
           .site-header .site-nav.active ul li.i02 {
-            animation: fade-in-dwn-2 400ms .3s ease-out forwards; }
+            animation: fade-in-dwn-2 400ms 0.3s ease-out forwards; }
           .site-header .site-nav.active ul li.i03 {
-            animation: fade-in-dwn-3 400ms .4s ease-out forwards; }
+            animation: fade-in-dwn-3 400ms 0.4s ease-out forwards; }
           .site-header .site-nav.active ul li.i04 {
-            animation: fade-in-dwn-4 400ms .5s ease-out forwards; }
+            animation: fade-in-dwn-4 400ms 0.5s ease-out forwards; }
           .site-header .site-nav.active ul li.i05 {
-            animation: fade-in-dwn-5 400ms .6s ease-out forwards; }
+            animation: fade-in-dwn-5 400ms 0.6s ease-out forwards; }
           .site-header .site-nav.active ul li.i06 {
-            animation: fade-in-dwn-6 400ms .7s ease-out forwards; }
+            animation: fade-in-dwn-6 400ms 0.7s ease-out forwards; }
           .site-header .site-nav.active ul li a {
             font-size: 30px;
             color: #414042; }
           .site-header .site-nav.active ul li .btn {
             width: 60%; }
+    .site-header .site-nav.small-mobile.active li.i01 {
+      animation: fade-in-dwn-sm-1 400ms 0.2s ease-out forwards; }
+    .site-header .site-nav.small-mobile.active li.i02 {
+      animation: fade-in-dwn-sm-2 400ms 0.3s ease-out forwards; }
+    .site-header .site-nav.small-mobile.active li.i03 {
+      animation: fade-in-dwn-sm-3 400ms 0.4s ease-out forwards; }
+    .site-header .site-nav.small-mobile.active li.i04 {
+      animation: fade-in-dwn-sm-4 400ms 0.5s ease-out forwards; }
+    .site-header .site-nav.small-mobile.active li.i05 {
+      animation: fade-in-dwn-sm-5 400ms 0.6s ease-out forwards; }
+    .site-header .site-nav.small-mobile.active li.i06 {
+      animation: fade-in-dwn-sm-6 400ms 0.7s ease-out forwards; }
+    .site-header .site-nav.small-mobile.active li.active {
+      padding: 5px; }
+    .site-header .site-nav.small-mobile.active a {
+      font-size: 14px !important; }
   .site-header .menu-btn {
     display: block;
     top: 172px; }
