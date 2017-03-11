@@ -45,7 +45,7 @@ var AYR = AYR || {};
 
       $('.soft-scroll').on('click', function(e){
         e.preventDefault();
-        let scrollElem = $(this).attr('href');
+        var scrollElem = $(this).attr('href');
         AYR.scrollTo( e, scrollElem);
       });
 
