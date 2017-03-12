@@ -609,7 +609,7 @@ input[type="text"] {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: hard-light;
+    // background-blend-mode: hard-light;
     // background-blend-mode: luminosity;
     z-index: 2;
     position: relative;
@@ -755,7 +755,15 @@ input[type="text"] {
     color: $site-dark-gray;
 
     h3 {
-      padding: 40px 0;
+      padding: 40px 0 30px;
+    }
+
+    h4 {
+      font-style: italic;
+      font-size: 26px;
+      padding: 0 0 10px;
+      font-weight: 500;
+      color: $site-light-gray;
     }
 
     .event-img {
@@ -763,6 +771,30 @@ input[type="text"] {
       max-width: 680px;
       display: inline-block;
     }
+
+    .cycle-pager {
+
+      span {
+        color: $site-dark-gray;
+        font-size: 40px;
+        margin: 0 20px;
+        cursor: pointer;
+
+
+
+        &.cycle-pager-active,
+        &:hover {
+          color: $site-yellow;
+        }
+
+        &:first-child {
+          margin: 0 20px 0 0;
+        }
+      }
+      
+    }
+
+    
 
     .cta-btn-block {
       margin: 30px 0 60px;
@@ -2116,6 +2148,9 @@ input[type="text"] {
 
       .the-team {
         .team-member {
+          width: 100%;
+          padding: 0;
+
           .member-title-bar {
             font-size: 18px;
           }

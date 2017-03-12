@@ -10,7 +10,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Project Tsehigh</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="slideshow.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i" rel="stylesheet">
   <!-- <link rel="stylesheet" href="css/style.min.css"> -->
   <link rel="stylesheet" href="css/style.css">
@@ -146,7 +147,21 @@
     <section class="event">
       <div class="wrapper">
         <h3>Latest Event</h3>
-        <a href="events.html" class="event-img"><img src="img/FB-Flyer.png" alt="event image"></a>
+        <h4>#PEDALFORPOWER Charity Event</h4>
+        <!-- <a href="events.html" class="event-img"><img src="img/FB-Flyer.png" alt="event image"></a> -->
+        <div class="cycle-slideshow event-img" 
+            data-cycle-swipe=true
+            data-cycle-fx=scrollHorz
+            data-cycle-timeout=3000
+            data-cycle-pause-on-hover="true"
+            >
+            <!-- empty element for pager links -->
+            <div class="cycle-pager"></div>
+
+            <img src="./img/latest-event/pedal-img-1.png">
+            <img src="./img/latest-event/pedal-img-2.png">
+            <img src="./img/latest-event/pedal-img-3.png">
+        </div>
         <div class="cta-btn-block">
           <a href="#" class="btn light">More Info</a>
           <a href="#" class="btn light">More Events</a>
@@ -248,6 +263,7 @@
   </script>
   <script src="js/ayrUtils.js"></script>
   <script src="js/jq_2_2.js"></script>
+  <script src="js/jq_cycle_2.js"></script>
   <script src="js/isotope.min.js"></script>
   <script src="js/custom_scrollbar.js"></script>
   <script src="js/script.js"></script>

@@ -618,7 +618,6 @@ input[type="text"] {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: hard-light;
   z-index: 2;
   position: relative;
   font-size: 24px;
@@ -716,11 +715,26 @@ input[type="text"] {
   background: #fff;
   color: #414042; }
   .index-page .event h3 {
-    padding: 40px 0; }
+    padding: 40px 0 30px; }
+  .index-page .event h4 {
+    font-style: italic;
+    font-size: 26px;
+    padding: 0 0 10px;
+    font-weight: 500;
+    color: #a9a59f; }
   .index-page .event .event-img {
     width: 100%;
     max-width: 680px;
     display: inline-block; }
+  .index-page .event .cycle-pager span {
+    color: #414042;
+    font-size: 40px;
+    margin: 0 20px;
+    cursor: pointer; }
+    .index-page .event .cycle-pager span.cycle-pager-active, .index-page .event .cycle-pager span:hover {
+      color: #ffde17; }
+    .index-page .event .cycle-pager span:first-child {
+      margin: 0 20px 0 0; }
   .index-page .event .cta-btn-block {
     margin: 30px 0 60px; }
     .index-page .event .cta-btn-block .btn {
@@ -1658,8 +1672,11 @@ input[type="text"] {
   .inner-page .site-content .sub-nav ul li a,
   .inner-page .site-content .sub-nav ul li button {
     font-size: 20px; }
-  .inner-page .site-content .the-team .team-member .member-title-bar {
-    font-size: 18px; }
+  .inner-page .site-content .the-team .team-member {
+    width: 100%;
+    padding: 0; }
+    .inner-page .site-content .the-team .team-member .member-title-bar {
+      font-size: 18px; }
   .inner-page .site-content .support-links a,
   .inner-page .site-content .support-links button {
     font-size: 12px; }

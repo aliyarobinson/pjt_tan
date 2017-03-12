@@ -181,7 +181,7 @@ var AYR = AYR || {};
     addTopLink: function(argument) {
       var yPos = -($(window).scrollTop()); 
 
-      if(yPos <= -240){
+      if(yPos <= -260){
         $('.top').removeClass('hidden');
       }else{
         $('.top').addClass('hidden');
