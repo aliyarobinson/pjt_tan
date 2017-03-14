@@ -348,6 +348,52 @@ input[type="text"] {
     .share-item svg:hover {
       fill: #ffde17; }
 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 700;
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -ms-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms; }
+  .overlay .close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid #ffde17;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -ms-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms; }
+    .overlay .close:hover {
+      background: #ffde17; }
+  .overlay .content {
+    box-shadow: 0 0 5px #a9a59f;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background: #fff;
+    text-align: center; }
+    .overlay .content h4 {
+      font-size: 42px;
+      font-weight: 400; }
+    .overlay .content p {
+      font-size: 28px;
+      line-height: 35px; }
+    .overlay .content .btn {
+      width: 60%; }
+
 ::-webkit-input-placeholder {
   color: #414042;
   font-size: 22px;
@@ -823,6 +869,15 @@ input[type="text"] {
         text-transform: uppercase; }
       .inner-page .site-content .the-team .team-member .title {
         font-weight: 400; }
+      .inner-page .site-content .the-team .team-member.no-image:before {
+        content: 'Photo Coming Soon';
+        position: absolute;
+        z-index: 2;
+        bottom: 70px;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 400; }
   .inner-page .site-content .block:nth-child(odd) {
     clear: left;
     padding: 0 20px 0 0; }
@@ -834,7 +889,7 @@ input[type="text"] {
   .inner-page .site-content .support-links a,
   .inner-page .site-content .support-links button {
     width: 80%; }
-  .inner-page .site-content .support-links button.share {
+  .inner-page .site-content .support-links button {
     margin: 20px 0;
     font: 100 16px 'Lato', arial, sans-serif;
     -webkit-transition: 400px;
@@ -842,9 +897,9 @@ input[type="text"] {
     -ms-transition: 400px;
     -o-transition: 400px;
     transition: 400px; }
-    .inner-page .site-content .support-links button.share.active {
+    .inner-page .site-content .support-links button.active {
       padding: 10px 25px; }
-      .inner-page .site-content .support-links button.share.active .share-bar-small {
+      .inner-page .site-content .support-links button.active .share-bar-small {
         padding: 0 25%;
         opacity: 1;
         pointer-events: auto; }
@@ -1001,7 +1056,8 @@ input[type="text"] {
   max-height: 0;
   opacity: 0;
   margin: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  pointer-events: none; }
 
 .loader-wrapper {
   position: fixed;
@@ -1624,6 +1680,12 @@ input[type="text"] {
     max-width: none;
     padding: 0 20px 30px; } }
 @media screen and (max-width: 500px) {
+  .overlay .content h4 {
+    font-size: 34px; }
+  .overlay .content p {
+    font-size: 22px;
+    line-height: 26px; }
+
   .site-header .site-nav {
     margin: 0 0 20px;
     max-height: 0;

@@ -72,6 +72,29 @@ var AYR = AYR || {};
         // location.href = newURL;
       });
 
+
+      /**************************************/
+      /*   Overlay Trigger
+      /***************************************************/
+      $(document).on( 'click', '.overlay-trigger', function( event ) {
+        console.log('************** overlay button click fired *****************');
+        event.preventDefault();
+        var $this = $(this);
+        var overlayName = $this.data('overlay');
+
+        $('.overlay.'+overlayName).removeClass('collapsed');
+      });
+
+      $(document).on( 'click', '.overlay .close', function( event ) {
+        console.log('************** overlay close button click fired *****************');
+        event.preventDefault();
+        var $this = $(this);
+        var overlay = $this.closest('.overlay');
+
+        overlay.addClass('collapsed');
+      });
+
+
       /**************************************/
       /*   Share button Click Script
       /***************************************************/
